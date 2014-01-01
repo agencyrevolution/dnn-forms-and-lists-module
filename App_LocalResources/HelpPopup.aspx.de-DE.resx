@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- 
+    DotNetNuke - The Web of the future
+    Copyright (c) 2002-2007 by DotNetNuke Corp. ( http://www.dotnetnuke.com )
+    
+    German Translation (c) 2004-2007 by Sebastian Leupold, gamma concept mbH
+    Please report comments and corrections at http://www.deutschnetnuke.de
+    -->
+  <data name="Help_Tokens_Title.Text">
+    <value>Referenz der verfügbaren Platzhalter</value>
+  </data>
+  <data name="Help_Tokens_Body.Text">
+    <value>&lt;div&gt;
+&lt;table cellspacing="3" cellpadding="2" width="100%" summary="" border="0"&gt;
+    &lt;colgroup&gt;&lt;col class="UDT_Help_RowHead"&gt;&lt;/col&gt;&lt;col class="UDT_Help_Row"&gt;&lt;/col&gt;&lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;td class="UDT_Help_ColHead"&gt;Platzhalter&lt;/td&gt;
+            &lt;td class="UDT_Help_ColHead"&gt;Beschreibung&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Portal:Currency]&lt;/td&gt;
+            &lt;td&gt;W&amp;auml;hrungszeichenfolge&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Portal:Description]&lt;/td&gt;
+            &lt;td&gt;Portalbeschreibung&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Portal:Email]&lt;/td&gt;
+            &lt;td&gt;E-Mail-Adresse des Portaladministrators&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Portal:FooterText]&lt;/td&gt;
+            &lt;td&gt;Copyright-Text des Portals&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Portal:HomeDirectory]&lt;/td&gt;
+            &lt;td&gt;(relativer) Pfad des Startverzeichnisses&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Portal:LogoFile]&lt;/td&gt;
+            &lt;td&gt;Pfad zum Logo des Portals&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Portal:PortalName]&lt;/td&gt;
+            &lt;td&gt;Name des Portals&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Portal:PortalAlias]&lt;/td&gt;
+            &lt;td&gt;URL des Portals&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Portal:TimeZoneOffset]&lt;/td&gt;
+            &lt;td&gt;Differenz zwischen Zeitzone des Portals und UTC in Minuten&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[User:DisplayName]&lt;/td&gt;
+            &lt;td&gt;Anzeigename des Benutzers&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[User:Email]&lt;/td&gt;
+            &lt;td&gt;E-Mail-Adresse&amp;nbsp;des Benutzers&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[User:FirstName]&lt;/td&gt;
+            &lt;td&gt;Vorname&amp;nbsp;des Benutzers&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[User:FullName]&lt;/td&gt;
+            &lt;td&gt;[veraltet]&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[User:LastName]&lt;/td&gt;
+            &lt;td&gt;Nachname&amp;nbsp;des Benutzers&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[User:Username]&lt;/td&gt;
+            &lt;td&gt;Anmeldename&amp;nbsp;des Benutzers&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Membership:Approved]&lt;/td&gt;
+            &lt;td&gt;ist der Benutzer freigeschaltet?&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Membership:CreatedDate] &lt;/td&gt;
+            &lt;td&gt;Datum der Registrierung&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Membership:IsOnline]&lt;/td&gt;
+            &lt;td&gt;ist der Benutzer gerade online?&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Profile:&amp;lt;Property&amp;gt;]&lt;/td&gt;
+            &lt;td&gt;Sie k&amp;ouml;nnen eines der Standard- oder benutzerdefinierten Profileigenschaften aus der Benutzerverwaltung verwenden. Bitte nur nicht-&amp;uuml;bersetzten Namen der Eigenschaft verwenden.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:Description]&lt;/td&gt;
+            &lt;td&gt;Beschreibungstext der Seite f&amp;uuml;r Suchmaschinen&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:EndDate]&lt;/td&gt;
+            &lt;td&gt;Enddatum zum Anzeigen der Seite&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:FullUrl]&lt;/td&gt;
+            &lt;td&gt;Vollst&amp;auml;ndige URL der Seite&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:IconFile]&lt;/td&gt;
+            &lt;td&gt;Relativer Pfad zum Icon der Seite&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:KeyWords]&lt;/td&gt;
+            &lt;td&gt;Suchbegriffe der Seite f&amp;uuml;r Suchmaschinen&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:PageHeadText]&lt;/td&gt;
+            &lt;td&gt;Kopftext der Seite&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:StartDate]&lt;/td&gt;
+            &lt;td&gt;Startdatum zum Anzeigen der Seite&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:TabName]&lt;/td&gt;
+            &lt;td&gt;Seitenname&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:TabPath]&lt;/td&gt;
+            &lt;td&gt;Relativer Pfad der Seite&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:Title]&lt;/td&gt;
+            &lt;td&gt;Titel der Seite&amp;nbsp;(Fenstername)&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Tab:URL]&lt;/td&gt;
+            &lt;td&gt;URL der aktuellen Seite&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:Description]&lt;/td&gt;
+            &lt;td&gt;Beschreibung der Moduldefinition&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:EndDate]&lt;/td&gt;
+            &lt;td&gt;Enddatum zum Anzeigen des Moduls&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:Footer]&lt;/td&gt;
+            &lt;td&gt;Fusstext des Moduls&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:FriendlyName]&lt;/td&gt;
+            &lt;td&gt;Name der Moduldefinition&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:Header]&lt;/td&gt;
+            &lt;td&gt;Kopftext des Moduls&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:HelpUrl]&lt;/td&gt;
+            &lt;td&gt;URL der Onlinehilfe des Moduls&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:IconFile]&lt;/td&gt;
+            &lt;td&gt;Pfad zum Icon des Moduls&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:ModuleTitle]&lt;/td&gt;
+            &lt;td&gt;Modul&amp;uuml;berschrift&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:PaneName]&lt;/td&gt;
+            &lt;td&gt;Name des Seitenbereichs, in dem sich das Modul befindet&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Module:StartDate]&lt;/td&gt;
+            &lt;td&gt;Startdatum zum Anzeigen der Seite&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[DateTime:Now]&lt;/td&gt;
+            &lt;td&gt;Aktuelles Datum und Uhrzeit&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Ticks:Now]&lt;/td&gt;
+            &lt;td&gt;CPU-Ticks des aktuellen Sekunde&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Ticks:Today]&lt;/td&gt;
+            &lt;td&gt;CPU-Ticks seit Mitternacht&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;[Ticks:TicksPerDay] &lt;/td&gt;
+            &lt;td&gt;CPU-Ticks je Tag (f&amp;uuml;r Berechnungen)&lt;/td&gt;
+        &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[Server:&lt;i&gt;Name&lt;/i&gt;]&lt;/td&gt;
+&lt;td&gt;Liefert die Server Variable &lt;i&gt;name&lt;/i&gt; zurück&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[Querystring:&lt;i&gt;Name&lt;/i&gt;]&lt;/td&gt;
+&lt;td&gt;Liefert den Querystring &lt;i&gt;name&lt;/i&gt; zurück&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[Form:&lt;i&gt;Name&lt;/i&gt;]&lt;/td&gt;
+&lt;td&gt;Liefert den POST-Wert von  &lt;i&gt;name&lt;/i&gt; zurück&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan="2"&gt;Für Nachschlage-Felder mit den Bezugsquellen &amp;quot;download&amp;quot; oder &amp;quot;URL&amp;quot; 
+    gelten auch:&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[File:Name]&lt;/td&gt;
+&lt;td&gt;Dateiname&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[File:Folder]&lt;/td&gt;
+&lt;td&gt;Ordner der Datei&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[File:Path]&lt;/td&gt;
+&lt;td&gt;Vollständiger Pfad zur Datei&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[File:Size]&lt;/td&gt;
+&lt;td&gt;Dateigröße in Byte&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;File:SizeMb]&lt;/td&gt;
+&lt;td&gt;Dateigröße in MegaByte&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[File:clicks]&lt;/td&gt;
+&lt;td&gt;Anzahl Downloads&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[File:Extension]&lt;/td&gt;
+&lt;td&gt;Dateierweiterung&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan="2"&gt;Für Nachschlage-Felder mit den Bezugsquellen &amp;quot;Email&amp;quot;, &amp;quot;erstellt von&amp;quot;, &amp;quot;aktualisiert von&amp;quot; oder &amp;quot;BenutzerLink&amp;quot;
+    gelten auch:&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[Gravatar:MD5Hash]&lt;/td&gt;
+&lt;td&gt;MD5 Hash der E-Mail Adresse (falls verfügbar)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[Gravatar:Url]&lt;/td&gt;
+&lt;td&gt;URL des Gravatar-Bildes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[Grvatar:Image]&lt;/td&gt;
+&lt;td&gt;Das Gravatar-Bild&lt;/td&gt;
+&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="UDT_Help_Text"&gt;&lt;br /&gt;
+F&amp;uuml;r Datum/Zeitwerte und Zahlen k&amp;ouml;nnen sie eine Formatangabe anh&amp;auml;ngen, wie sie im&amp;nbsp;.Net Framework verwendet wird, z.B.: [DateTime:Now|f]&amp;nbsp;zeigt das aktuelle Datum im Format f (kurzes Datum).&lt;br/&gt;&lt;br/&gt;
+Sie können einen Alternativtext festlegen, der zurückgeliefert wird, wenn der gewünschte Wert leer oder 'null' ist: [Token:Property|Format|Alternative]&lt;/div&gt;</value>
+  </data>
+  <data name="Help_HiddenColumns_Title.Text">
+    <value>Referenz der ausgeblendeten Spalten</value>
+  </data>
+  <data name="Help_HiddenColumns_Body.Text">
+    <value>&lt;table cellspacing="3" cellpadding="2" width="100%" summary="" border="0"&gt;
+    &lt;colgroup&gt;&lt;col class="UDT_Help_RowHead"&gt;&lt;/col&gt;&lt;col class="UDT_Help_Row"&gt;&lt;/col&gt;&lt;col class="UDT_Help_Row"&gt;&lt;/col&gt;&lt;col class="UDT_Help_Row"&gt;&lt;/col&gt;&lt;col class="UDT_Help_Row"&gt;&lt;/col&gt;&lt;col class="UDT_Help_Row"&gt;&lt;/col&gt;&lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;td class="UDT_Help_ColHead"&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td class="UDT_Help_ColHead"&gt;ColumName&lt;/td&gt;
+            &lt;td class="UDT_Help_ColHead"&gt;+_UDT_Original &lt;sup&gt;*&lt;/sup&gt;&lt;/td&gt;
+            &lt;td class="UDT_Help_ColHead"&gt;+_UDT_Value&lt;/td&gt;
+            &lt;td class="UDT_Help_ColHead"&gt;+_UDT_Ticks&lt;/td&gt;
+            &lt;td class="UDT_Help_ColHead"&gt;+_UDT_Url&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Boolean&lt;/td&gt;
+            &lt;td&gt;Bild&amp;nbsp;[(in)aktiv.gif]&lt;/td&gt;
+            &lt;td&gt;'true'/'false'&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Changed At&lt;/td&gt;
+            &lt;td&gt;Datum&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;lokalisiertes Datum&lt;/td&gt;
+            &lt;td&gt;DateTime in Ticks&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Changed by&lt;/td&gt;
+            &lt;td&gt;Anzeigename&lt;/td&gt;
+            &lt;td&gt;Anmeldename&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Created At&lt;/td&gt;
+            &lt;td&gt;Datum&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;lokalisiertes Datum&lt;/td&gt;
+            &lt;td&gt;DateTime in Ticks&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Created By&lt;/td&gt;
+            &lt;td&gt;Anzeigename&lt;/td&gt;
+            &lt;td&gt;Anmeldename&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Currency&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Date&lt;/td&gt;
+            &lt;td&gt;Datum&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;lokalisiertes Datum&lt;/td&gt;
+            &lt;td&gt;DateTime in Ticks&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Date/Time&lt;/td&gt;
+            &lt;td&gt;Datum und Zeit&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;lokalisiertes Datum/Zeit&lt;/td&gt;
+            &lt;td&gt;DateTime in Ticks&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Decimal&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Download&lt;/td&gt;
+            &lt;td&gt;HTML-Link&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;URL&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Email&lt;/td&gt;
+            &lt;td&gt;HTML-Link&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;&lt;a href="mailto:Wert"&gt;mailto:Wert&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Expression&lt;/td&gt;
+            &lt;td&gt;Result of Expression&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Image&lt;/td&gt;
+            &lt;td&gt;&amp;lt;img&amp;gt;-Tag&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;Bild-URL&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Integer&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;String&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Text/Html&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Time&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;DateTime in Ticks&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;URL&lt;/td&gt;
+            &lt;td&gt;HTML-Link&lt;/td&gt;
+            &lt;td&gt;Wert&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;-&lt;/td&gt;
+            &lt;td&gt;URL&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</value>
+  </data>
+</root>

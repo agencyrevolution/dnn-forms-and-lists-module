@@ -1,0 +1,164 @@
+﻿<dotnetnuke type="ResourceFile" version="5.0">
+  <files>
+    <file>
+      <path />
+      <name>CaptionValueEditor.js</name>
+    </file>
+    <file>
+      <path />
+      <name>Cleanup_06.00.00.txt</name>
+    </file>
+    <file>
+      <path />
+      <name>configuration.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>datatypes.config</name>
+    </file>
+    <file>
+      <path />
+      <name>default.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ExportCSV.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>FieldEditor.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>form.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>helppopup.aspx</name>
+    </file>
+    <file>
+      <path />
+      <name>icon_fnl_32px.gif</name>
+    </file>
+    <file>
+      <path />
+      <name>ImportCSV.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>License.htm</name>
+    </file>
+    <file>
+      <path />
+      <name>list.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>makethumbnail.ashx</name>
+    </file>
+    <file>
+      <path />
+      <name>module.css</name>
+    </file>
+    <file>
+      <path />
+      <name>New Text Document.txt</name>
+    </file>
+    <file>
+      <path />
+      <name>releasenotes.htm</name>
+    </file>
+    <file>
+      <path />
+      <name>settings.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>showxml.ashx</name>
+    </file>
+    <file>
+      <path />
+      <name>template.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>templatelist.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>token2xsl.ascx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>configuration.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>default.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>ExportCSV.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>FieldEditor.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>form.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>helppopup.aspx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>ImportCSV.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>list.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>settings.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>sharedresources.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>template.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>templatelist.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>token2xsl.ascx.resx</name>
+    </file>
+    <file>
+      <path>Controls/</path>
+      <name>Field.ascx</name>
+    </file>
+    <file>
+      <path>Controls/</path>
+      <name>Fields.ascx</name>
+    </file>
+    <file>
+      <path>Controls/</path>
+      <name>FieldSettings.ascx</name>
+    </file>
+    <file>
+      <path>xslstylesheets/</path>
+      <name>xslscripts.xml</name>
+    </file>
+    <file>
+      <path>xslstylesheets/tracking/</path>
+      <name>auto.xsl</name>
+    </file>
+  </files>
+</dotnetnuke>

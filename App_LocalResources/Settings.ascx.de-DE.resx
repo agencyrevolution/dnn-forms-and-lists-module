@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- 
+    DotNetNuke - The Web of the future      
+    Copyright (c) 2002-2007  by DotNetNuke Corp. (http://www.dotnetnuke.com)
+    
+    German Translation (c) 2004-2007 by Sebastian Leupold, gamma concept mbH
+    Please report comments and corrections at http://www.deutschnetnuke.de
+   -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ModuleHelp.Text">
+    <value>Modulspezifische Einstellungen für Form and List 
+&lt;p&gt;Das Modul "Form and List" erlaubt die Erstellung einer individuellen Tabelle mit beliebig vielen Spalten unterschiedlichen Typs.&lt;/p&gt;&lt;p&gt;In den Moduleinstellungen können Sie erweiterte &lt;strong&gt;Berechtigungen&lt;/strong&gt; für die in Ihrem Portal angelegten Benutzergruppen vornehmen:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Aktivieren Sie &lt;strong&gt;Modul anzeigen&lt;/strong&gt;, wenn die Mitglieder der Benutzergruppe das Modul mit den enthaltenen Datensätzen anzeigen dürfen. Diese Kontrollkästchen sind nur aktiv, wenn die Option &lt;strong&gt;Ansichtisrecht von Seite erben&lt;/strong&gt; nicht ausgewählt ist.&lt;/li&gt;&lt;li&gt;Verwenden Sie &lt;strong&gt;Modul bearbeiten&lt;/strong&gt;, um Benutzern einer Gruppe die Berechtigung zu geben, Spalten zu definieren und Einstellungen für die Tabellenansicht vorzunehmen.&lt;/li&gt;&lt;li&gt;Mit &lt;strong&gt;Datensatz bearbeiten&lt;/strong&gt; erlauben Sie den Gruppenmitgliedern, bestehende Datensätze zu editieren.&lt;/li&gt;&lt;li&gt;Damit ein Benutzergruppe neue Einträge erstellen kann, müssen Sie die Option &lt;strong&gt;Neuen Datensatz erstellen&lt;/strong&gt; aktivieren.&lt;/li&gt;&lt;li&gt;aktivieren Sie &lt;strong&gt;Datensatz löschen&lt;/strong&gt;, wenn Benutzer einer Gruppe auch Einträge dauerhaft entfernen dürfen.&lt;/li&gt;&lt;li&gt;Sollten Sie die Situation haben, dass bestimmte Spalten einzelnen Benutzergruppen nicht angezeigt werden sollen, so definieren Sie diese Felder als &lt;i&gt;verborgen&lt;/i&gt;. Aktivieren Sie für alle Gruppen, die diese Felder doch sehen sollen, die Spalte &lt;strong&gt;Alle definierten Felder anzeigen &lt;/strong&gt;- Administratoren sehen alle benutzerdefinierten Felder, wenn Sie sich nicht im Vorschaumodus befinden.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;In den &lt;strong&gt;Einstellungen der Benutzerdefinierten Tabelle&lt;/strong&gt; stehen Ihnen folgende Optionen zur Verfügung:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Wenn eine Benutzergruppe die Berechtigung erhält, Datensätze zu erstellen, zu bearbeiten oder zu löschen, betrifft dies in der Regel alle Datensätze. Mit der Option  &lt;strong&gt;Benutzer dürfen nur eigene Einträge bearbeiten&lt;/strong&gt; gilt dieses Recht nur für Einträge, die der aktuelle Benutzer selbst erstellt hat.&lt;/li&gt;&lt;li&gt;Wenn Sie auch nicht-angemeldeten Benutzern das Recht eingeräumt haben, Datensätze zu erstellen oder zu bearbeiten, besteht die Gefahr, dass dies von automatisierten Routinen missbraucht wird, um Spam zu veröffentlichen. Sie können für diesen Fall die Option &lt;strong&gt;Eingabe eines Sicherheitscodes (Captcha) zur Bearbeitung durch nicht-angemeldete Benutzer &lt;/strong&gt;vorgeben aktivieren, so dass nur manuelle Bearbeitung möglich ist. &lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="ControlTitle_settings.Text">
+    <value>Einstellungen der Benutzerdefinierten Tabelle</value>
+  </data>
+  <data name="EditOwnData.Text">
+    <value>Benutzer dürfen nur eigene Einträge bearbeiten.</value>
+  </data>
+  <data name="ForceCaptcha.Text">
+    <value>Eingabe eines Sicherheitscodes (Captcha) zur Bearbeitung durch nicht-angemeldete Benutzer vorgeben.</value>
+  </data>
+  <data name="InputFiltering.Text">
+    <value>Eingabe von HTML und ausführbarem Code verhindern. Hinweis: diese Option ist für Eingaben durch nicht angemeldete Benutzer stets aktiv!</value>
+  </data>
+  <data name="DisplayColumns.Text">
+    <value>Die Berechtigung "Alle definierten Felder anzeigen" für Administratoren negieren</value>
+  </data>
+  <data name="plUserRecordQuota.Help">
+    <value>Geben Sie die Anzahl ein, wieviele Datensätze ein Benutzer maximal anlegen kann. Lassen Sie das Feld frei, um kein Limit zu setzen.</value>
+  </data>
+  <data name="plUserRecordQuota.Text">
+    <value>Max. Anzahl an Datensätzen pro Benutzer</value>
+  </data>
+  <data name="PrivateColumns.Text">
+    <value>Die Berechtigung "Eingeschränkte Spalten bearbeiten" für Administratoren negieren.</value>
+  </data>
+  <data name="DisplaySystemColumns.Text">
+    <value>System-Felder immer verstecken.</value>
+  </data>
+</root>

@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ModuleHelp.Text" xml:space="preserve">
+    <value>&lt;h1&gt;Variablenbasierter HTML-Editor und XSL-Konverter&lt;/h1&gt;
+        &lt;p&gt;Verwenden Sie diese Seite, um Ihre individuelle XSL-Transformation zu erstellen.&lt;/p&gt;
+        &lt;p&gt;Sie können zwischen verschiedenen Konstrukten wählen: Tabelle, Absätze und Listen mit individuelle festgelegten Trennzeichen&lt;/p&gt;
+        &lt;p&gt;Wir empfehlen, mit der Standardsicht zu beginnen und diese HTML-Vorlage gemäß Ihren Wünschen anzupassen. Mit der Spaltenauswahl können Sie UDT-Felder einfügen.&lt;/p&gt;
+        &lt;p&gt;Nachdem Sie Ihre HTML-Vorlage fertiggestellt haben, generieren Sie daraus die XSL-Transformation, die Sie nun ebenfalls modifizieren können.&lt;/p&gt;
+        &lt;p&gt;Zum Schluss speichern Sie die Datei und wählen Sie &lt;strong&gt; zurück&lt;&lt;/strong&gt;, um zur Verwaltungsseite zu kommen.&lt;/p&gt;
+        </value>
+  </data>
+  <data name="plListType.Text" xml:space="preserve">
+    <value>Auflistungs-Typ</value>
+  </data>
+  <data name="plListType.Help" xml:space="preserve">
+    <value>Sie können zwischen Tabelle (table), Bereich (div) und Absatz (p) wählen.</value>
+  </data>
+  <data name="ControlTitle_generatexsl.Text" xml:space="preserve">
+    <value>Generiere XSLT</value>
+  </data>
+  <data name="plColumns.Text" xml:space="preserve">
+    <value>Verfügbare Spalten</value>
+  </data>
+  <data name="plColumns.Help" xml:space="preserve">
+    <value>Alle UDT-Spalten.&lt;br/&gt;Die Art des Wertes hängt vom Datentyp ab.</value>
+  </data>
+  <data name="table.Text" xml:space="preserve">
+    <value>Tabelle</value>
+  </data>
+  <data name="btnGenerateXslt.Text" xml:space="preserve">
+    <value>Aus HTML-Vorlage generieren</value>
+  </data>
+  <data name="cmdSaveFile.Text" xml:space="preserve">
+    <value>Datei speichern und zurück</value>
+  </data>
+  <data name="cmdRebuildContent.Text" xml:space="preserve">
+    <value>Wiederherstellen</value>
+  </data>
+  <data name="cmdAddColumnWithTags.Text" xml:space="preserve">
+    <value>Datenfeld einfügen</value>
+  </data>
+  <data name="confirmOnRebuild.Text" xml:space="preserve">
+    <value>Eventuelle Änderungen gehen verloren. Möchten Sie wirklich wiederherstellen?</value>
+  </data>
+  <data name="dshHtml.Text" xml:space="preserve">
+    <value>1. HTML-Vorlage editieren</value>
+  </data>
+  <data name="dshXslt.Text" xml:space="preserve">
+    <value>2. XSLT-Skript editieren</value>
+  </data>
+  <data name="lblConfirm.Text" xml:space="preserve">
+    <value>Diese Datei existiert bereits. Möchten Sie sie überschreiben?</value>
+  </data>
+  <data name="plFileName.Text" xml:space="preserve">
+    <value>Filename</value>
+  </data>
+  <data name="plFileName.Help" xml:space="preserve">
+    <value>Die Dateiendung *.xsl wird automatisch angehängt,&lt;br/&gt;wenn sie nicht in der Textbox angegeben wird.&lt;br/&gt;Die Datei wird im Verzeichnis "...\Portals\[PortalID]\XslStyleSheets\" gespeichert.</value>
+  </data>
+  <data name="dshSave.Text" xml:space="preserve">
+    <value>3. Datei speichern</value>
+  </data>
+  <data name="error.Text" xml:space="preserve">
+    <value>Die Vorlage ist nicht wohlgeformt:&lt;br/&gt;</value>
+  </data>
+  <data name="div.Text" xml:space="preserve">
+    <value>Bereich</value>
+  </data>
+  <data name="p.Text" xml:space="preserve">
+    <value>Absatz</value>
+  </data>
+  <data name="plDelimiter.Text" xml:space="preserve">
+    <value>Trennzeichen</value>
+  </data>
+  <data name="plDelimiter.Help" xml:space="preserve">
+    <value>Sie können einen Text aus einem oder mehreren Buchstaben angeben,&lt;br/&gt;der als Trennzeichen zwischen den Spalten verwendet wird&lt;br/&gt;(Standard ist ";", wenn die Textbox leer ist).</value>
+  </data>
+  <data name="ApplicationPath.Text" xml:space="preserve">
+    <value>Anwendungspfad</value>
+  </data>
+  <data name="br.Text" xml:space="preserve">
+    <value>Zeilenumbruch</value>
+  </data>
+  <data name="chkAddPagingSupport" xml:space="preserve">
+    <value>Blättern hinzufügen</value>
+  </data>
+  <data name="chkAddSortingSupport.Text" xml:space="preserve">
+    <value>Suche hinzufügen</value>
+  </data>
+  <data name="cmdColumnsHelp.Text" xml:space="preserve">
+    <value>Ausgeblendete Spalten</value>
+  </data>
+  <data name="cmdInsert.Text" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="CurrentCulture.Text" xml:space="preserve">
+    <value>aktuelle Spracheinstellung</value>
+  </data>
+  <data name="DisplayName.Text" xml:space="preserve">
+    <value>Anzeigename</value>
+  </data>
+  <data name="dshDetailView.Text" xml:space="preserve">
+    <value>Detailanzeige</value>
+  </data>
+  <data name="dshListView.Text" xml:space="preserve">
+    <value>Listenanzeige</value>
+  </data>
+  <data name="dshOptions.Text" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="HomePath.Text" xml:space="preserve">
+    <value>Startverzeichnis</value>
+  </data>
+  <data name="IsAdministratorRole.Text" xml:space="preserve">
+    <value>ist Portalverwaltergruppe</value>
+  </data>
+  <data name="lblEnablePaging.Help" xml:space="preserve">
+    <value>Aktivieren Sie diese Option, um eine Navigation zum Blättern durch die angezeigte Liste einzublenden.&lt;br&gt; Die Anzahl der Einträge je Seite wird in der "Form and List Konfiguration" festgelegt.</value>
+  </data>
+  <data name="lblEnablePaging.Text" xml:space="preserve">
+    <value>Blättern dem Style Sheet hinzufügen</value>
+  </data>
+  <data name="lblEnableSearch.Help" xml:space="preserve">
+    <value>Aktivieren Sie diese Option, um ein Suchfeld über der angezeigten Liste einzublenden,&lt;br&gt;mit deren Hilfe Benutzer einen einzugebenden Text in den Datensätzen suchen können</value>
+  </data>
+  <data name="lblEnableSearch.Text" xml:space="preserve">
+    <value>Suchfeld dem Style Sheet hinzufügen</value>
+  </data>
+  <data name="lblEnableSorting.Help" xml:space="preserve">
+    <value>Aktivieren Sie diese Option, um die Datensätze entsprechend der Einstellungen aus "Form and List Konfiguration" zu sortieren.</value>
+  </data>
+  <data name="lblEnableSorting.Text" xml:space="preserve">
+    <value>Sortieren dem Style Sheet hinzufügen</value>
+  </data>
+  <data name="lblShowDetailView.Help" xml:space="preserve">
+    <value>Aktivieren Sie diese Option, um den Datensätzen eine Verknüpfung zur Detailanzeige hinzuzufügen.</value>
+  </data>
+  <data name="lblShowDetailView.Text" xml:space="preserve">
+    <value>Detailsicht aktivieren</value>
+  </data>
+  <data name="ModuleId.Text" xml:space="preserve">
+    <value>Module-Id</value>
+  </data>
+  <data name="nothing.Text" xml:space="preserve">
+    <value>Nichts</value>
+  </data>
+  <data name="noTransformButValid.Text" xml:space="preserve">
+    <value>Der Listentyp kann nicht geändert werden, aber die Vorlage scheint gültig zu sein.</value>
+  </data>
+  <data name="ol.Text" xml:space="preserve">
+    <value>Sortierte Liste</value>
+  </data>
+  <data name="OrderBy.Text" xml:space="preserve">
+    <value>sortiert nach</value>
+  </data>
+  <data name="OrderDirection.Text" xml:space="preserve">
+    <value>Sortierrichtung</value>
+  </data>
+  <data name="Parameter.Text" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="plFolderName.Help" xml:space="preserve">
+    <value>Sie können den Ordnernamen nicht ändern.</value>
+  </data>
+  <data name="plFolderName.Text" xml:space="preserve">
+    <value>Ablageordner</value>
+  </data>
+  <data name="PortalId.Text" xml:space="preserve">
+    <value>Portal-ID</value>
+  </data>
+  <data name="TabId.Text" xml:space="preserve">
+    <value>Seiten-ID</value>
+  </data>
+  <data name="ul.Text" xml:space="preserve">
+    <value>unsortierte Liste</value>
+  </data>
+  <data name="UserName.Text" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="UserRoles.Text" xml:space="preserve">
+    <value>Benutzergruppen</value>
+  </data>
+  <data name="lblSearchIsObsolete.Text" xml:space="preserve">
+    <value>Die XSL-Suche ist veraltet. Bitte benutzen Sie die eingebaute Suche.</value>
+  </data>
+  <data name="plHeader.Help" xml:space="preserve">
+    <value>Shows textbox for header definition</value>
+  </data>
+  <data name="plHeader.Text" xml:space="preserve">
+    <value>Enable header definition</value>
+  </data>
+  <data name="plHeaderList.Help" xml:space="preserve">
+    <value>Verfügbare Spaltentitel(Bezeichnung + Sortieren falls aktiviert)</value>
+  </data>
+  <data name="plHeaderList.Text" xml:space="preserve">
+    <value>Verfügbare Spaltentitel</value>
+  </data>
+</root>
