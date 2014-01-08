@@ -172,7 +172,7 @@ namespace DotNetNuke.Modules.UserDefinedTable.Controllers
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 var row = table.Rows[i];
-                if(!IsKeywordMatched(keywords, row, table.Rows.Count))
+                if(!IsKeywordMatched(keywords, row, table.Columns.Count))
                     row.Delete();
             }
             table.AcceptChanges();
