@@ -1,0 +1,75 @@
+﻿    /************************************************************/
+    /*****       SqlDataProvider                            *****/
+    /*****       Install/Upgrade for UserDefinedTable 6.0.4 *****/
+    /*****                                                  *****/
+    /*****                                                  *****/
+    /***** Note: To manually execute this script you must   *****/
+    /*****       perform a search AND replace operation     *****/
+    /*****       for {databaseOwner} AND {objectQualifier}  *****/
+    /*****       or use 'SQL' FROM Host Menu AND run this.  *****/
+    /*****                                                  *****/
+    /*****                                                  *****/
+    /************************************************************/
+
+
+/***************************************
+ Table: UserDefinedHandlebarsTemplates 
+***************************************/
+
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}UserDefinedHandlebarsTemplates]') AND type in (N'U'))
+	BEGIN
+		PRINT 'UserDefinedHandlebarsTemplates was already created';
+	END
+ELSE
+	BEGIN
+
+		CREATE TABLE {databaseOwner}[{objectQualifier}UserDefinedHandlebarsTemplates](
+			[Id] [int] IDENTITY(1,1) NOT NULL,
+			[ModuleId] [int] NULL,
+			[TemplateString] [nvarchar](max) NOT NULL,
+			[RequiredJavaScripts] [nvarchar](2000) NULL,
+			[RequiredStylesheets] [nvarchar](2000) NULL,
+			[CreatedDate] [datetime] NOT NULL,
+			[CreatedByUserId] [int] NOT NULL,
+			[LastModifiedDate] [datetime] NOT NULL,
+			[LastModifiedByUserId] [int] NOT NULL,
+		 CONSTRAINT [PK_UserDefinedHandlebarsTemplates] PRIMARY KEY CLUSTERED 
+		(
+			[Id] ASC
+		) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+		) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+		
+	END
+
+GO
+
+/*******************************************
+ Table: UserDefinedCachedHtmlContents 
+*******************************************/
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}UserDefinedCachedHtmlContents]') AND type in (N'U'))
+	BEGIN
+		PRINT 'UserDefinedCachedHtmlContents was already created';		
+	END
+ELSE
+	BEGIN
+
+		CREATE TABLE {databaseOwner}[{objectQualifier}UserDefinedCachedHtmlContents](
+			[Id] [int] IDENTITY(1,1) NOT NULL,
+			[ModuleId] [int] NOT NULL,
+			[Keyword] [nvarchar](50) NULL,
+			[Skip] [int] NOT NULL,
+			[Limit] [int] NOT NULL,
+			[HtmlContent] [nvarchar](max) NULL,
+			[LastModifiedDate] [datetime] NOT NULL,
+		 CONSTRAINT [PK_UserDefinedCachedHtmlContents] PRIMARY KEY CLUSTERED 
+		(
+			[Id] ASC
+		) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+		) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+	
+	END
+	
+GO

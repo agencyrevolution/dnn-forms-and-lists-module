@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,25 +117,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ModuleHelp.Text" xml:space="preserve">
-    <value>&lt;h1&gt;About the Form and List Module&lt;/h1&gt;
-&lt;p&gt;The Form and List Module allows you to manage an individual table of data, where each column of data is a specific data type and each row represents a single record.&amp;#160;Column headings, when clicked, reorder data alphanumerically&amp;#160;A-Z or Z-A. If the feature is enabled, you may &lt;strong&gt;Search&lt;/strong&gt; through records that contain only select data.&lt;/p&gt;
-&lt;p&gt;If granted permission by the site Administrator,&amp;#160;you can &lt;strong&gt;Add&amp;#160;New Record&lt;/strong&gt; and&amp;#160;optionally&amp;#160;&lt;strong&gt;Edit&lt;/strong&gt;&amp;#160;and &lt;strong&gt;Delete&lt;/strong&gt; any records or only those records you have added yourself. If you have the ability to&amp;#160;add or edit records without being logged in this site, you may need to enter a CAPTCHA confirmation code.&lt;/p&gt;
-&lt;p&gt;Page Administrators can edit &lt;strong&gt;Module Settings&lt;/strong&gt; and select &lt;strong&gt;Form and List Configuration&lt;/strong&gt; from the module Action Menu to define columns and column properties.&lt;/p&gt;</value>
+  <data name="btnGetJson.Text" xml:space="preserve">
+    <value>Get JSON String</value>
   </data>
-  <data name="CreateTemplate.Action" xml:space="preserve">
-    <value>Save as Template</value>
+  <data name="errLimit.Help" xml:space="preserve">
+    <value>Please enter a valid integer number between 1 and 100!</value>
   </data>
-  <data name="ContentOptions.Action" xml:space="preserve">
-    <value>Form and List Configuration</value>
+  <data name="errLimit.Text" xml:space="preserve">
+    <value>Please enter a valid integer number between 1 and 100!</value>
   </data>
-  <data name="ExportCSV.Action" xml:space="preserve">
-    <value>Export to CSV file</value>
+  <data name="errSkip.Help" xml:space="preserve">
+    <value>Please enter a positive integer</value>
   </data>
-  <data name="ImportCSV.Action" xml:space="preserve">
-    <value>Import from CSV file</value>
+  <data name="errSkip.Text" xml:space="preserve">
+    <value>Please enter a positive integer!</value>
   </data>
-  <data name="HandlebarsTemplate.Action" xml:space="preserve">
-    <value>Handlebars Template</value>
+  <data name="lbHtml.Text" xml:space="preserve">
+    <value>HTML Source</value>
+  </data>
+  <data name="lbJson.Help" xml:space="preserve">
+    <value>This will show the JSON format of the results</value>
+  </data>
+  <data name="lbJson.Text" xml:space="preserve">
+    <value>JSON String</value>
+  </data>
+  <data name="lbLimit.Help" xml:space="preserve">
+    <value>The maximum of number of items you want in the results. You must enter a integer between 0 and 100.</value>
+  </data>
+  <data name="lbLimit.Text" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="lbPreview.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="lbRequiredJavaScripts.Help" xml:space="preserve">
+    <value>Please enter the relative URL of JavaScript files which you want to include. Separated by , or ; or |</value>
+  </data>
+  <data name="lbRequiredJavaScripts.Text" xml:space="preserve">
+    <value>Required JavaScripts</value>
+  </data>
+  <data name="lbRequiredStylesheets.Help" xml:space="preserve">
+    <value>Please enter the relative URL of css files which you want to include. Separated by , or ; or |</value>
+  </data>
+  <data name="lbRequiredStylesheets.Text" xml:space="preserve">
+    <value>Required Stylesheets</value>
+  </data>
+  <data name="lbSkip.Help" xml:space="preserve">
+    <value>How many items you want to skip before return the results. You must enter a positive integer</value>
+  </data>
+  <data name="lbSkip.Text" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="lbTemplateContent.Help" xml:space="preserve">
+    <value>Please enter the Handlebars template content</value>
+  </data>
+  <data name="lbTemplateContent.Text" xml:space="preserve">
+    <value>Template Content</value>
+  </data>
+  <data name="plTemplateEditor.Text" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="plTemplateTest.Text" xml:space="preserve">
+    <value>Testing</value>
+  </data>
+  <data name="ShowJson.Action" xml:space="preserve">
+    <value>Show JSON</value>
   </data>
 </root>

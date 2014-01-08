@@ -19,14 +19,19 @@ namespace DotNetNuke.Modules.UserDefinedTable
         }
 
 
-        void InitViews()
+        private void InitViews()
         {
             var sec = new ModuleSecurity(ModuleId, TabId, new Components.Settings(Settings));
 
             switch (ModuleContext.Settings[SettingName.ListOrForm].AsString("Unknown"))
             {
                 case "List":
-                    LoadControlByKey("List");
+                    var tabSettings = new ModuleController().GetTabModuleSettings(TabModuleId);
+                    if (tabSettings.ContainsKey(SettingName.RenderingMethod) &&
+                        tabSettings[SettingName.RenderingMethod].ToString().Equals(RenderingMethod.UserDefinedHandlebarsTemplate))
+                        LoadControlByKey("HandlebarsListView");
+                    else
+                        LoadControlByKey("List");
                     break;
                 case "Form":
                     if (Request.QueryString["show"].AsString() == "records" && sec.IsAllowedToViewList())
@@ -98,7 +103,7 @@ namespace DotNetNuke.Modules.UserDefinedTable
             {
                 var viewType = ModuleContext.Settings[SettingName.ListOrForm].AsString("Undefined");
                 var actions = new ModuleActionCollection();
-                foreach (var view in PlaceHolderControl.Controls )
+                foreach (var view in PlaceHolderControl.Controls)
                 {
                     if ((view) is IActionable)
                     {
@@ -111,26 +116,51 @@ namespace DotNetNuke.Modules.UserDefinedTable
                     }
                 }
                 actions.Add(GetNextActionID(),
-                            Localization.GetString(ModuleActionType.ContentOptions, LocalResourceFile),
-                            ModuleActionType.ModuleSettings, "", "settings.gif", EditUrl("Manage"), false,
-                            SecurityAccessLevel.Edit, true, false);
+                    Localization.GetString(ModuleActionType.ContentOptions, LocalResourceFile),
+                    ModuleActionType.ModuleSettings, "", "settings.gif", EditUrl("Manage"), false,
+                    SecurityAccessLevel.Edit, true, false);
                 if (viewType != "Undefined")
                 {
                     actions.Add(GetNextActionID(), Localization.GetString("CreateTemplate.Action", LocalResourceFile),
-                                "CreateTemplate", "", Utilities.IconURL("Save"), EditUrl("CreateTemplate"),
-                                false, SecurityAccessLevel.Admin, true, false);
+                        "CreateTemplate", "", Utilities.IconURL("Save"), EditUrl("CreateTemplate"),
+                        false, SecurityAccessLevel.Admin, true, false);
                 }
 
                 actions.Add(GetNextActionID(), Localization.GetString("ExportCSV.Action", LocalResourceFile),
-                            ModuleActionType.ExportModule, "", ResolveUrl("~/images/action_export.gif"),
-                            EditUrl("", "", "ExportCSV", "moduleid=" + ModuleId), false,
-                            SecurityAccessLevel.Edit, true, false);
+                    ModuleActionType.ExportModule, "", ResolveUrl("~/images/action_export.gif"),
+                    EditUrl("", "", "ExportCSV", "moduleid=" + ModuleId), false,
+                    SecurityAccessLevel.Edit, true, false);
                 actions.Add(GetNextActionID(), Localization.GetString("ImportCSV.Action", LocalResourceFile),
-                            ModuleActionType.ImportModule, "", ResolveUrl("~/images/action_import.gif"),
-                            EditUrl("", "", "ImportCSV", "moduleid=" + ModuleId), false,
-                            SecurityAccessLevel.Edit, true, false);
+                    ModuleActionType.ImportModule, "", ResolveUrl("~/images/action_import.gif"),
+                    EditUrl("", "", "ImportCSV", "moduleid=" + ModuleId), false,
+                    SecurityAccessLevel.Edit, true, false);
+
+                // BEGIN: Handlebars template
+                if (IsHandlebarsTemplateSelected())
+                {
+                    actions.Add(GetNextActionID(),
+                        Localization.GetString("HandlebarsTemplate.Action", LocalResourceFile),
+                        ModuleActionType.EditContent,
+                        string.Empty,
+                        Utilities.IconURL("Edit"),
+                        EditUrl(ControlKeys.HandlebarsTemplates),
+                        false,
+                        SecurityAccessLevel.Edit,
+                        true,
+                        false);
+                }
+                // END: Handlebars template
+
                 return actions;
             }
+        }
+
+        private bool IsHandlebarsTemplateSelected()
+        {
+            var controller = new ModuleController();
+            var settings = controller.GetTabModuleSettings(TabModuleId);
+            return settings.ContainsKey(SettingName.RenderingMethod) &&
+                   settings[SettingName.RenderingMethod].ToString().Equals(RenderingMethod.UserDefinedHandlebarsTemplate);
         }
     }
 }

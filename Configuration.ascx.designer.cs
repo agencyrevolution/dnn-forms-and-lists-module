@@ -220,6 +220,33 @@ namespace DotNetNuke.Modules.UserDefinedTable {
         protected global::System.Web.UI.WebControls.LinkButton cmdGenerateXSL;
         
         /// <summary>
+        /// handlebarsTemplatePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl handlebarsTemplatePanel;
+        
+        /// <summary>
+        /// cmdEditHandlebars control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton cmdEditHandlebars;
+        
+        /// <summary>
+        /// cmdGenerateHandlebars control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton cmdGenerateHandlebars;
+        
+        /// <summary>
         /// lblSorting control.
         /// </summary>
         /// <remarks>

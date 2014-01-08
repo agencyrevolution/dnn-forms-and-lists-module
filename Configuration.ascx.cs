@@ -9,7 +9,10 @@ using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Framework;
 using DotNetNuke.Modules.UserDefinedTable.Components;
+using DotNetNuke.Modules.UserDefinedTable.Controllers;
+using DotNetNuke.Modules.UserDefinedTable.Controllers.Caches;
 using DotNetNuke.Modules.UserDefinedTable.Interfaces;
+using DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.FileSystem;
@@ -271,10 +274,19 @@ namespace DotNetNuke.Modules.UserDefinedTable
             {
                 case RenderingMethod.GridRendering:
                     rowUserDefined.Visible = false;
+                    handlebarsTemplatePanel.Visible = false;
                     break;
              
                 case RenderingMethod.UserdefinedXSL:
                     rowUserDefined.Visible = true;
+                    handlebarsTemplatePanel.Visible = false;
+                    break;
+                case RenderingMethod.UserDefinedHandlebarsTemplate:
+                    rowUserDefined.Visible = false;
+                    handlebarsTemplatePanel.Visible = true;
+                    var handlebarsTemplate = new HandlebarsTemplateController().GetTemplateByModuleId(ModuleContext.ModuleId);
+                    cmdGenerateHandlebars.Visible = handlebarsTemplate == null;
+                    cmdEditHandlebars.Visible = handlebarsTemplate != null;
                     break;
             }
         }
@@ -309,6 +321,9 @@ namespace DotNetNuke.Modules.UserDefinedTable
         {
             try
             {
+                // clear html cache
+                new CachedHtmlContentController().DeleteCachedHtmlContentsByModuleId(ModuleContext.ModuleId);
+
                 UpdateModuleSetting(SettingName.ExcludeFromSearch, chkExcludeFromSearch.Checked.ToString(CultureInfo.InvariantCulture));
 
                 if (cboSortField.SelectedItem != null)
@@ -341,8 +356,28 @@ namespace DotNetNuke.Modules.UserDefinedTable
                     {
                         strUserDefinedXsl = file.Folder + file.FileName;
                     }
+                } 
+                
+                // BEGIN: Handlebars template
+                if (strRenderingMethod == RenderingMethod.UserDefinedHandlebarsTemplate)
+                {
+                    var handlebarsTemplate = new HandlebarsTemplateController().GetTemplateByModuleId(ModuleContext.ModuleId);
+                    if (handlebarsTemplate == null)
+                    {
+                        strRenderingMethod = RenderingMethod.GridRendering;
+                        cmdGenerateHandlebars.Visible = true;
+                        cmdEditHandlebars.Visible = false;
+                    }
+                    else
+                    {
+                        cmdGenerateHandlebars.Visible = true;
+                        cmdEditHandlebars.Visible = false;
+                    }
                 }
-                 UpdateTabModuleSetting(SettingName.XslUserDefinedStyleSheet, strUserDefinedXsl);
+                //UpdateTabModuleSetting(SettingName.UserDefinedHandlebarsTemplate, strUserDefinedHandlebarsTemplate);
+                // END: Handlebars template
+
+                UpdateTabModuleSetting(SettingName.XslUserDefinedStyleSheet, strUserDefinedXsl);
                 UpdateTabModuleSetting(SettingName.RenderingMethod, strRenderingMethod);
                 //Paging
                 UpdateTabModuleSetting(SettingName.Paging, cboPaging.SelectedValue);
@@ -447,6 +482,10 @@ namespace DotNetNuke.Modules.UserDefinedTable
             cmdUpdate.Click += cmdUpdate_Click;
             chkShowSearchTextBox.CheckedChanged += chkShowSearchTextBox_CheckedChanged;
           
+            // BEGIN: Handlebars template
+            cmdEditHandlebars.Click += cmdEditHandlebars_Click;
+            cmdGenerateHandlebars.Click += cmdGenerateHandlebars_Click;
+            // END: Handlebars template
 
             Load += Page_Load;
             Fields.LocalizeString = LocalizeString;
@@ -455,7 +494,6 @@ namespace DotNetNuke.Modules.UserDefinedTable
             jQuery.RequestDnnPluginsRegistration();
             ClientAPI.RegisterClientReference(Page, ClientAPI.ClientNamespaceReferences.dnn);
         }
-
 
         void Page_Load(object sender, EventArgs e)
         {
@@ -475,7 +513,21 @@ namespace DotNetNuke.Modules.UserDefinedTable
             }
         }
 
-    
+        #region Handlebars template
+
+        void cmdGenerateHandlebars_Click(object sender, EventArgs e)
+        {
+            SaveSettings();
+            Response.Redirect(ModuleContext.EditUrl(ControlKeys.HandlebarsTemplates));
+        }
+
+        void cmdEditHandlebars_Click(object sender, EventArgs e)
+        {
+            SaveSettings();
+            Response.Redirect(ModuleContext.EditUrl(ControlKeys.HandlebarsTemplates));
+        }
+
+        #endregion
 
         void cmdCancel_Click(object sender, EventArgs e)
         {
@@ -495,8 +547,7 @@ namespace DotNetNuke.Modules.UserDefinedTable
                 Response.Redirect(Globals.NavigateURL(ModuleContext.TabId), true);
             }
         }
-
-
+        
         void cmdGenerateXSL_Click(object sender, EventArgs e)
         {
             SaveSettings();

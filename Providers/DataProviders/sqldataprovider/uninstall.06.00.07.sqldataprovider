@@ -1,0 +1,46 @@
+﻿/************************************************************/
+/*****       SqlDataProvider                            *****/
+/*****       Uninstall for Form and List               *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****       or use 'SQL' from Host Menu and run this.  *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop Tables **/
+
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}UserDefinedHandlebarsTemplates]') AND type in (N'U'))
+	BEGIN
+		PRINT 'Table UserDefinedHandlebarsTemplates was already created';
+		IF (SELECT COUNT(*) FROM {databaseOwner}[{objectQualifier}UserDefinedHandlebarsTemplates]) > 0
+			BEGIN
+				PRINT 'Table UserDefinedHandlebarsTemplates already had items, should not be dropped to avoid losing data!!!';
+			END
+		ELSE
+			DROP TABLE {databaseOwner}[{objectQualifier}UserDefinedHandlebarsTemplates]
+	END
+
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}UserDefinedCachedHtmlContents]') AND type in (N'U'))
+	BEGIN
+		PRINT 'Table UserDefinedCachedHtmlContents was already created';
+		IF (SELECT COUNT(*) FROM {databaseOwner}[{objectQualifier}UserDefinedCachedHtmlContents]) > 0
+			BEGIN
+				PRINT 'Table UserDefinedCachedHtmlContents already had items, should not be dropped to avoid losing data!!!';
+			END
+		ELSE
+			DROP TABLE {databaseOwner}[{objectQualifier}UserDefinedCachedHtmlContents]
+	END
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

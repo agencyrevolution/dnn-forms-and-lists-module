@@ -34,6 +34,14 @@
     </file>
     <file>
       <path />
+      <name>HandlebarsListView.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>HandlebarsTemplates.ascx</name>
+    </file>
+    <file>
+      <path />
       <name>helppopup.aspx</name>
     </file>
     <file>
@@ -74,6 +82,10 @@
     </file>
     <file>
       <path />
+      <name>ShowJson.ashx</name>
+    </file>
+    <file>
+      <path />
       <name>showxml.ashx</name>
     </file>
     <file>
@@ -107,6 +119,10 @@
     <file>
       <path>App_LocalResources/</path>
       <name>form.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>HandlebarsTemplates.ascx.resx</name>
     </file>
     <file>
       <path>App_LocalResources/</path>

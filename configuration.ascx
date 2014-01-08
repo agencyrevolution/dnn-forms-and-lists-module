@@ -91,6 +91,7 @@
 					AutoPostBack="True">
 					<asp:ListItem resourcekey="DataGrid" Value="DataGrid" Selected="True" />
 					<asp:ListItem resourcekey="XslTrans" Value="XslUserDefinedStyleSheet" />
+                    <asp:ListItem resourcekey="HandlebarsTrans" Value="UserDefinedHandlebarsTemplate" />
 				</asp:RadioButtonList>
 			</div>
 	    	<div class="dnnFormItem" id="rowUserDefined" runat="server">
@@ -104,6 +105,18 @@
 					</div>
                 </div>
 			</div>
+            
+            <!-- BEGIN: Handlebars template -->
+            <div class="dnnFormItem" id="handlebarsTemplatePanel" runat="server">
+				<dnn:Label runat="server" Suffix=":" />
+                <div class="pushRight">
+					<div class="BelowUrlControl">
+						<asp:LinkButton ID="cmdEditHandlebars" runat="server" CssClass="dnnSecondaryAction " resourcekey="cmdEditHandlebars" />
+						<asp:LinkButton CssClass="dnnPrimaryAction" resourcekey="cmdShowHandlebarsGenerator" ID="cmdGenerateHandlebars" runat="server" />
+					</div>
+                </div>
+			</div>
+            <!-- END: Handlebars template -->
 
 			<asp:Label ID="lblSorting"  resourcekey="Sorting" runat="server" />
 			<div class="dnnFormItem">

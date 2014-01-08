@@ -1,6 +1,6 @@
 ﻿<dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="DNN_UserDefinedTable" type="Module" version="06.00.05">
+    <package name="DNN_UserDefinedTable" type="Module" version="06.00.07">
       <friendlyName>Form and List</friendlyName>
       <description>Create a simple form or a view of repetitive and simple data.</description>
       <iconFile>desktopmodules/userdefinedtable/icon_fnl_32px.gif</iconFile>
@@ -114,11 +114,21 @@
               <name>06.00.04.sqldataprovider</name>
               <version>06.00.04</version>
             </script>
+            <script type="Install">
+              <path>providers\dataproviders\sqldataprovider</path>
+              <name>06.00.07.sqldataprovider</name>
+              <version>06.00.07</version>
+            </script>
             <script type="UnInstall">
               <path>providers\dataproviders\sqldataprovider</path>
               <name>uninstall.sqldataprovider</name>
               <version>06.00.03</version>
-            </script>         
+            </script>
+            <script type="UnInstall">
+              <path>providers\dataproviders\sqldataprovider</path>
+              <name>uninstall.06.00.07.sqldataprovider</name>
+              <version>06.00.07</version>
+            </script>
           </scripts>
         </component>
         <component type="Module">
@@ -134,7 +144,9 @@
               <moduleDefinition>
                 <friendlyName>Form and List</friendlyName>
                 <defaultCacheTime>-1</defaultCacheTime>
+                
                 <moduleControls>
+                  
                   <moduleControl>
                     <controlKey />
                     <controlSrc>DesktopModules/UserDefinedTable/Default.ascx</controlSrc>
@@ -146,6 +158,7 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>CreateTemplate</controlKey>
                     <controlSrc>DesktopModules/UserDefinedTable/Template.ascx</controlSrc>
@@ -157,6 +170,7 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>Edit</controlKey>
                     <controlSrc>DesktopModules/UserDefinedTable/Form.ascx</controlSrc>
@@ -168,6 +182,7 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>EditField</controlKey>
                     <controlSrc>DesktopModules/UserdefinedTable/FieldEditor.ascx</controlSrc>
@@ -178,6 +193,7 @@
                     <helpUrl />
                     <supportsPopUps>False</supportsPopUps>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>ExportCSV</controlKey>
                     <controlSrc>DesktopModules/UserDefinedTable/ExportCSV.ascx</controlSrc>
@@ -189,6 +205,7 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>GenerateXsl</controlKey>
                     <controlSrc>DesktopModules/UserDefinedTable/Token2Xsl.ascx</controlSrc>
@@ -200,6 +217,7 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>ImportCSV</controlKey>
                     <controlSrc>DesktopModules/UserDefinedTable/ImportCSV.ascx</controlSrc>
@@ -211,6 +229,7 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>List</controlKey>
                     <controlSrc>DesktopModules/UserDefinedTable/List.ascx</controlSrc>
@@ -222,6 +241,7 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>Manage</controlKey>
                     <controlSrc>DesktopModules/UserdefinedTable/Configuration.ascx</controlSrc>
@@ -233,6 +253,7 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>Settings</controlKey>
                     <controlSrc>DesktopModules/UserDefinedTable/Settings.ascx</controlSrc>
@@ -244,6 +265,7 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+                  
                   <moduleControl>
                     <controlKey>TemplateList</controlKey>
                     <controlSrc>DesktopModules/UserDefinedTable/TemplateList.ascx</controlSrc>
@@ -255,6 +277,31 @@
                     <supportsPopUps>False</supportsPopUps>
                     <viewOrder>0</viewOrder>
                   </moduleControl>
+
+                  <moduleControl>
+                    <controlKey>HandlebarsTemplates</controlKey>
+                    <controlSrc>DesktopModules/UserDefinedTable/HandlebarsTemplates.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Manage Handlebars Templates</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl>http://handlebarsjs.com/</helpUrl>
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+
+                  <moduleControl>
+                    <controlKey>HandlebarsListView</controlKey>
+                      <controlSrc>DesktopModules/UserDefinedTable/HandlebarsListView.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl>http://handlebarsjs.com/</helpUrl>
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+
                 </moduleControls>
                 <permissions>
                   <permission code="UDTEDIT" key="ROWEDIT" name="Edit Row" />

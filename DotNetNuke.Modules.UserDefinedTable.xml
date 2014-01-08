@@ -153,6 +153,254 @@
             <param name = "default">Default value</param>
             -----------------------------------------------------------------------------
         </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.Get``1">
+            <summary>
+            Get all items
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.Get``1(System.Int32)">
+            <summary>
+            Get all items by scope value
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.Get``1(System.String,System.Object)">
+            <summary>
+            Get items where a given column has a given value
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="columnName"></param>
+            <param name="columnValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.Get``1(System.Collections.Generic.KeyValuePair{System.String,System.Object},System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            Get items where satisfy two conditions
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.Get``1(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Get items where satisfy three conditions
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.GetById``1(System.Int32)">
+            <summary>
+            Get item by id
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.Save``1(System.Int32,``0)">
+            <summary>
+            Add a new item or update an existing item
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="id"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.DeleteById``1(System.Int32)">
+            <summary>
+            Delete an item by id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.Delete``1(``0)">
+            <summary>
+            Delete an item
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.Delete``1(System.String,System.Object)">
+            <summary>
+            Delete all items where a given column has a given value
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="columnName"></param>
+            <param name="columnValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.BaseDataController.Delete``1(System.Collections.Generic.KeyValuePair{System.String,System.Object},System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            Delete all items where satisfy two equal conditions
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.Caches.CachedHtmlContentController.GetCachedHtmlContent(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Get CachedHtmlContent entity
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.Caches.CachedHtmlContentController.SaveCachedHtmlContent(DotNetNuke.Modules.UserDefinedTable.Models.Caches.CachedHtmlContent)">
+            <summary>
+            Add a new item or update the existing one
+            </summary>
+            <param name="cachedHtmlContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.Caches.CachedHtmlContentController.DeleteCachedHtmlContentsByModuleId(System.Int32)">
+            <summary>
+            Delete a CachedHtmlContent by module id
+            </summary>
+            <param name="moduleId"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.Caches.CachedHtmlContentController.DeleteCachedHtmlContent(DotNetNuke.Modules.UserDefinedTable.Models.Caches.CachedHtmlContent)">
+            <summary>
+            Delete a CachedHtmlContent entity
+            </summary>
+            <param name="cachedHtmlContent"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.GetJsonString(DotNetNuke.Modules.UserDefinedTable.Models.SearchOptions.SearchOptions,System.String)">
+            <summary>
+            Search data by options, return json string
+            </summary>
+            <param name="options"></param>
+            <param name="pageUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.GetHtml(DotNetNuke.Modules.UserDefinedTable.Models.SearchOptions.SearchOptions,System.Boolean)">
+            <summary>
+            Search data by options, return Html content
+            </summary>
+            <param name="options"></param>
+            <param name="allowAnonymous"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.FilterDataRow(DotNetNuke.Modules.UserDefinedTable.Models.SearchOptions.SearchOptions,System.Data.DataSet)">
+            <summary>
+            Filter data rows
+            </summary>
+            <param name="options"></param>
+            <param name="dataSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.GetDataSet(DotNetNuke.Modules.UserDefinedTable.Models.SearchOptions.SearchOptions,System.Boolean)">
+            <summary>
+            Get DataSet
+            </summary>
+            <param name="options"></param>
+            <param name="allowAnonymous"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.FilterByKeyword(System.String,System.Data.DataTable)">
+            <summary>
+            Filter by keyword
+            </summary>
+            <param name="keyword"></param>
+            <param name="table"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.IsKeywordMatched(System.Collections.Generic.List{System.String},System.Data.DataRow,System.Int32)">
+            <summary>
+            At least one keyword match at least one column data?
+            </summary>
+            <param name="keywords"></param>
+            <param name="row"></param>
+            <param name="columnCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.FilterBySkipAndLimit(System.Int32,System.Int32,System.Data.DataTable)">
+            <summary>
+            Filter by skip and limit
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.AddPaginationJson(DotNetNuke.Modules.UserDefinedTable.Models.SearchOptions.SearchOptions,System.Int32,System.String)">
+            <summary>
+            Add Pagination json to the normalized json string
+            </summary>
+            <param name="options"></param>
+            <param name="totalCount"></param>
+            <param name="normalizedJson"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.BuildPagination(DotNetNuke.Modules.UserDefinedTable.Models.SearchOptions.SearchOptions,System.Int32)">
+            <summary>
+            Build Pagination from search options, module info and main data table
+            </summary>
+            <param name="options"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.DataController.BuildQueryString(System.String,System.Int32,System.Int32)">
+            <summary>
+            Build query string from keyword, skip and limit
+            </summary>
+            <param name="keyword"></param>
+            <param name="skip"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.FriendlyUrlHelpers.GetFriendlyUrl(System.Int32)">
+            <summary>
+            Get friendly URL
+            </summary>
+            <param name="moduleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.FriendlyUrlHelpers.GetTabId(System.Int32)">
+            <summary>
+            Get Tab ID by module ID
+            </summary>
+            <param name="moduleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.FriendlyUrlHelpers.ReturnItemIdFromPath(System.String,System.String,System.Int32@)">
+            <summary>
+            parse url format to get id
+            </summary>
+            <param name="urlPath"></param>
+            <param name="idPattern">office-(\d+)- or employee-(\d+)-</param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.HandlebarsTemplateController.GetTemplateByModuleId(System.Int32)">
+            <summary>
+            Get all HandlebarsTemplates associated with module id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.HandlebarsTemplateController.GetTemplate(System.Int32)">
+            <summary>
+            Get a HandlebarsTemplate by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.HandlebarsTemplateController.SaveTemplate(DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate,System.Boolean)">
+            <summary>
+            Add a new item or update the existing one
+            </summary>
+            <param name="template"></param>
+            <param name="forceAdded">If true, force adding a new Template regardless checking existance</param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.HandlebarsTemplateController.DeleteTemplate(System.Int32)">
+            <summary>
+            Delete a HandlebarsTemplate by id
+            </summary>
+            <param name="templateId"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.HandlebarsTemplateController.DeleteTemplate(DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate)">
+            <summary>
+            Delete a HandlebarsTemplate
+            </summary>
+            <param name="template"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Controllers.HandlebarsTemplateController.DeleteCachedHtmlContentsByModuleId(System.Int32)">
+            <summary>
+            Delete cached html contents
+            </summary>
+            <param name="moduleId"></param>
+        </member>
         <member name="F:DotNetNuke.Modules.UserDefinedTable.Controls.Field.divWarning">
             <summary>
             divWarning control.
@@ -603,6 +851,321 @@
             To modify move field declaration from designer file to code-behind file.
             </remarks>
         </member>
+        <member name="T:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView">
+            -----------------------------------------------------------------------------
+            <summary>
+              The UserDefinedTable Class provides the UI for displaying the UserDefinedTable
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.btnSearch_Click(System.Object,System.EventArgs)">
+            <summary>
+            Triggered when the user clicks on Search button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+            Triggered when the page is loading
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.SetSearchBoxVisibility">
+            <summary>
+            Show or hide search box
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.RegisterJavaScripts(System.String)">
+            <summary>
+            Register JavaScripts
+            </summary>
+            <param name="requiredJavaScripts"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.RegisterStylesheets(System.String)">
+            <summary>
+            Register Stylesheets
+            </summary>
+            <param name="requiredStylesheets"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.BuildSearchOptions">
+            <summary>
+            Build SearchOptions from Request.QueryString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.GetLimitFromTabModuleSettings">
+            <summary>
+            Get Limit (Paging value) from Tab Module Settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.panelSearch">
+            <summary>
+            panelSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.txtSearch">
+            <summary>
+            txtSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.btnSearch">
+            <summary>
+            btnSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsListView.placeHolderMainView">
+            <summary>
+            placeHolderMainView control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="T:DotNetNuke.Modules.UserDefinedTable.ShowJson">
+            <summary>
+            Summary description for ShowJson
+            </summary>
+        </member>
+        <member name="T:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates">
+            -----------------------------------------------------------------------------
+            <summary>
+            Manage Handlebars Template
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.btnGetJson_Click(System.Object,System.EventArgs)">
+            <summary>
+            Get JSON
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.btnGetHtml_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handle the click event on GetHtml button.
+            Send request to nodejs power template app to get html from Json and Handlebars template
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.cmdBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handle the click event on Back button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.cmdSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handle the click event on Save button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.BindData">
+            <summary>
+            Fetch data from database and bind to ASP controls
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.Validate">
+            <summary>
+            Validate Handlebars template before saving
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.SaveHandlebarsTemplate">
+            <summary>
+            Save Handlebars Template
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.UpdateSettings">
+            <summary>
+            Update Settings
+            </summary>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.hlpColumns">
+            <summary>
+            hlpColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbTemplateContent">
+            <summary>
+            lbTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtTemplateContent">
+            <summary>
+            txtTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbRequiredJavaScripts">
+            <summary>
+            lbRequiredJavaScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtRequiredJavaScripts">
+            <summary>
+            txtRequiredJavaScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbRequiredStylesheets">
+            <summary>
+            lbRequiredStylesheets control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtRequiredStylesheets">
+            <summary>
+            txtRequiredStylesheets control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbSkip">
+            <summary>
+            lbSkip control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtSkip">
+            <summary>
+            txtSkip control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbLimit">
+            <summary>
+            lbLimit control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtLimit">
+            <summary>
+            txtLimit control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.btnGetJson">
+            <summary>
+            btnGetJson control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.btnGetHtml">
+            <summary>
+            btnGetHtml control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtJson">
+            <summary>
+            txtJson control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtHtml">
+            <summary>
+            txtHtml control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.panelPreview">
+            <summary>
+            panelPreview control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.cmdSave">
+            <summary>
+            cmdSave control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.cmdBack">
+            <summary>
+            cmdBack control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.ModuleActions">
+            <summary>
+            List of Module Actions for this view
+            </summary>
+        </member>
         <member name="T:DotNetNuke.Modules.UserDefinedTable.DataType">
             -----------------------------------------------------------------------------
             <summary>
@@ -702,6 +1265,13 @@
             To modify move field declaration from designer file to code-behind file.
             </remarks>
         </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Helpers.UserInfoHelpers.GetDisplayNameById(System.Int32)">
+            <summary>
+            Get DisplayName by user id
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
         <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportCsv.plFolder">
             <summary>
             plFolder control.
@@ -777,6 +1347,53 @@
         <member name="T:DotNetNuke.Modules.UserDefinedTable.MakeThumbnail">
             <summary>
               Summary description for MakeThumbnail
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate.Id">
+            <summary>
+             The ID of your object with the name of the ItemName
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate.ModuleId">
+            <summary>
+            Each template belongs to a specific module
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate.TemplateString">
+            <summary>
+             The string content follows Handlebars template syntax
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate.CreatedByUserId">
+            <summary>
+             An integer for the user id of the user who created the object
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate.LastModifiedByUserId">
+            <summary>
+             An integer for the user id of the user who last updated the object
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate.CreatedDate">
+            <summary>
+             The date the object was created
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate.LastModifiedDate">
+            <summary>
+             The date the object was updated
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate.RequiredJavaScripts">
+            <summary>
+             Contains the list of required JavaScript to be rendered on View page.
+             Separate by , or ; or | and trim start and end any spaces.
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates.HandlebarsTemplate.RequiredStylesheets">
+            <summary>
+             Contains the list of required css files to be rendered on View page.
+             Separate by , or ; or | and trim start and end any spaces.
             </summary>
         </member>
         <member name="M:DotNetNuke.Modules.UserDefinedTable.Serialization.ModuleSerializationController.SerializeModule(System.Xml.XmlDocument,DotNetNuke.Entities.Modules.ModuleInfo,System.Boolean)">
@@ -1404,6 +2021,33 @@
         <member name="F:DotNetNuke.Modules.UserDefinedTable.Configuration.cmdGenerateXSL">
             <summary>
             cmdGenerateXSL control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.Configuration.handlebarsTemplatePanel">
+            <summary>
+            handlebarsTemplatePanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.Configuration.cmdEditHandlebars">
+            <summary>
+            cmdEditHandlebars control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.Configuration.cmdGenerateHandlebars">
+            <summary>
+            cmdGenerateHandlebars control.
             </summary>
             <remarks>
             Auto-generated field.

@@ -10,6 +10,7 @@ using DotNetNuke.Entities.Icons;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Modules.UserDefinedTable.Components;
+using DotNetNuke.Modules.UserDefinedTable.Controllers.Caches;
 using DotNetNuke.Modules.UserDefinedTable.Interfaces;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
@@ -431,6 +432,9 @@ namespace DotNetNuke.Modules.UserDefinedTable
             {
                 try
                 {
+                    // clear cached html content
+                    new CachedHtmlContentController().DeleteCachedHtmlContentsByModuleId(ModuleContext.ModuleId);
+
                     //warning message of validation has failed
                     var warningMessage = string.Empty;
                     warningMessage = _editControls.Values.Where(edit => ! edit.IsValid())
@@ -512,6 +516,9 @@ namespace DotNetNuke.Modules.UserDefinedTable
             {
                 try
                 {
+                    // clear cached html content
+                    new CachedHtmlContentController().DeleteCachedHtmlContentsByModuleId(ModuleContext.ModuleId);
+
                     UdtController.DeleteRow(_userDefinedRowId);
                     RecordDeleted();
                     Response.Redirect(Globals.NavigateURL(ModuleContext.TabId), true);

@@ -7,6 +7,7 @@ namespace DotNetNuke.Modules.UserDefinedTable.Components
         public const string GridRendering = "DataGrid";
         public const string UserdefinedXSL = "XslUserDefinedStyleSheet";
         public const string PredefinedXSL = "XslPreDefinedStyleSheet";
+        public const string UserDefinedHandlebarsTemplate = "UserDefinedHandlebarsTemplate";
     }
 
 
@@ -45,6 +46,7 @@ namespace DotNetNuke.Modules.UserDefinedTable.Components
         public const string Settings = "Settings";
         public const string TabSettings = "TabSettings";
         public const string Stylesheets = "XSL";
+        public const string Pagination = "Pagination";
     }
 
     public class FieldsTableColumn
@@ -123,6 +125,11 @@ namespace DotNetNuke.Modules.UserDefinedTable.Components
         public const string CnCLink = "UDT_CnCLink";
         public const string XslPreDefinedStyleSheet = "UDT_XslPreDefinedStyleSheet";
         public const string XslUserDefinedStyleSheet = "UDT_XslUserDefinedStyleSheet";
+
+        // BEGIN: Handlebars template
+        public const string UserDefinedHandlebarsTemplate = "UDT_UserDefinedHandlebarsTemplate";
+        // END: Handlebars template
+
         public const string ShowSearchTextBox = "UDT_ShowSearchTextBox";
         public const string ShowNoRecordsUntilSearch = "UDT_ShowNoRecordsUntilSearch";
         public const string SimpleSearch = "UDT_SimpleSearch";
