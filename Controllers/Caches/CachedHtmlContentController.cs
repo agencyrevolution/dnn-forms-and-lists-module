@@ -29,13 +29,14 @@ namespace DotNetNuke.Modules.UserDefinedTable.Controllers.Caches
         /// Get CachedHtmlContent entity
         /// </summary>
         /// <returns></returns>
-        public CachedHtmlContent GetCachedHtmlContent(int moduleId, int skip, int limit, string keyword = null)
+        public CachedHtmlContent GetCachedHtmlContent(int moduleId, int skip, int limit, bool isEditMode, string keyword = null)
         {
             var conditions = new Dictionary<string, object>
             {
                 {CachedHtmlContent.ModuleIdProperty, moduleId},
                 {CachedHtmlContent.SkipProperty, skip},
                 {CachedHtmlContent.LimitProperty, limit},
+                {CachedHtmlContent.IsEditModeProperty, isEditMode? 1: 0},
                 {CachedHtmlContent.KeywordProperty, keyword}
             };
 
@@ -61,7 +62,7 @@ namespace DotNetNuke.Modules.UserDefinedTable.Controllers.Caches
             {
                 var repository = context.GetRepository<CachedHtmlContent>();
                 var existingItem = GetCachedHtmlContent(cachedHtmlContent.ModuleId, cachedHtmlContent.Skip,
-                    cachedHtmlContent.Limit, cachedHtmlContent.Keyword);
+                    cachedHtmlContent.Limit, cachedHtmlContent.IsEditMode, cachedHtmlContent.Keyword);
                 if (existingItem == null)
                     repository.Insert(cachedHtmlContent);
                 else

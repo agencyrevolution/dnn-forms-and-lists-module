@@ -291,6 +291,18 @@
                   </moduleControl>
 
                   <moduleControl>
+                    <controlKey>HandlebarsTemplatesFile</controlKey>
+                    <controlSrc>DesktopModules/UserDefinedTable/HandlebarsTemplatesFile.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Manage Handlebars Templates (DNN File)</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl>http://handlebarsjs.com/</helpUrl>
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+
+                  <moduleControl>
                     <controlKey>HandlebarsListView</controlKey>
                       <controlSrc>DesktopModules/UserDefinedTable/HandlebarsListView.ascx</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>

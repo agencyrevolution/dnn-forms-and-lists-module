@@ -7,5 +7,7 @@
         public const string Limit = "limit";
         public const string ModuleId = "mid";
         public const string TabId = "tabid";
+        public const string FileId = "FileID";
+        public const string Edit = "Edit";
     }
 }

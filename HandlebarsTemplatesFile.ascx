@@ -1,6 +1,7 @@
-<%@ Control Language="C#" Inherits="DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates"
-    TargetSchema="http://schemas.microsoft.com/intellisense/ie5" CodeBehind="HandlebarsTemplates.ascx.cs" AutoEventWireup="false" %>
+<%@ Control Language="C#" Inherits="DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplatesFile"
+    TargetSchema="http://schemas.microsoft.com/intellisense/ie5" CodeBehind="HandlebarsTemplatesFile.ascx.cs" AutoEventWireup="false" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
+<%@ Register TagPrefix="Portal" TagName="URL" Src="~/Controls/URLControl.ascx" %>
 
 <script type="text/javascript">
     jQuery(function ($) {
@@ -23,7 +24,7 @@
         });
 
         // json format
-        $('.json-format').each(function(index, elem) {
+        $('.json-format').each(function (index, elem) {
             try {
                 var jsonObj = JSON.parse(elem.value);
                 elem.value = JSON.stringify(jsonObj, '\t', 4);
@@ -41,8 +42,9 @@
     </div>
 
     <div class="dnnPanel">
-        <h2 class="dnnFormSectionHead dnnFormExpandContent">
-            <a href=""><asp:Label runat="server" ResourceKey="plTemplateEditor" /></a>
+        <h2 class="dnnFormSectionHead">
+            <a href="">
+                <asp:Label runat="server" ResourceKey="plTemplateEditor" /></a>
         </h2>
         <fieldset>
             <legend></legend>
@@ -61,10 +63,12 @@
                 </div>
             </div>
         </fieldset>
+    </div>
 
-        <h2 class="dnnFormSectionHead" class="dnnFormExpandContent">
+    <div class="dnnPanel">
+        <h2 class="dnnFormSectionHead">
             <a href="">
-                <asp:Label runat="server" ResourceKey="plTemplateTest" /></a>
+                <asp:Label ID="Label1" runat="server" ResourceKey="plTemplateTest" /></a>
         </h2>
         <fieldset>
             <legend></legend>
@@ -89,17 +93,17 @@
                         <ul class="dnnAdminTabNav">
                             <li>
                                 <a href="#jsonContent">
-                                    <asp:Label resourcekey="lbJson" runat="server" />
+                                    <asp:Label ID="Label3" resourcekey="lbJson" runat="server" />
                                 </a>
                             </li>
                             <li>
                                 <a href="#htmlContent">
-                                    <asp:Label resourcekey="lbHtml" runat="server" />
+                                    <asp:Label ID="Label4" resourcekey="lbHtml" runat="server" />
                                 </a>
                             </li>
                             <li>
                                 <a href="#preview">
-                                    <asp:Label resourcekey="lbPreview" runat="server" />
+                                    <asp:Label ID="Label5" resourcekey="lbPreview" runat="server" />
                                 </a>
                             </li>
                         </ul>
@@ -116,8 +120,29 @@
                 </div>
             </div>
         </fieldset>
-
     </div>
+
+    <div class="dnnPanel">
+        <h2 class="dnnFormSectionHead">
+            <a href="">
+                <asp:Label ID="Label6" runat="server" ResourceKey="plTemplateStorage" /></a>
+        </h2>
+        <fieldset>
+            <legend></legend>
+            <div>
+                <div class="dnnFormItem">
+                    <dnn:Label runat="server" Suffix="" ID="lblFolders" ControlName="ddlFolders" />
+                    <asp:DropDownList runat="server" ID="ddlFolders"></asp:DropDownList>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label runat="server" Suffix="" ID="lblFileName" ControlName="txtFileName" />
+                    <asp:TextBox runat="server" ID="txtFileName"></asp:TextBox>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <asp:Panel ID="panelError" runat="server" CssClass="dnnFormMessage dnnFormValidationSummary" Visible="False"></asp:Panel>
 
     <div>
         <asp:LinkButton ID="cmdSave" runat="server" CssClass="dnnPrimaryAction"

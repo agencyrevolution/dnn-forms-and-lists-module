@@ -8,7 +8,9 @@ using DotNetNuke.Modules.UserDefinedTable.Components;
 using DotNetNuke.Modules.UserDefinedTable.Controllers;
 using DotNetNuke.Modules.UserDefinedTable.Models;
 using DotNetNuke.Modules.UserDefinedTable.Models.SearchOptions;
+using DotNetNuke.Security.Permissions;
 using DotNetNuke.Services.Exceptions;
+using DotNetNuke.Services.FileSystem;
 
 namespace DotNetNuke.Modules.UserDefinedTable
 {
@@ -38,6 +40,8 @@ namespace DotNetNuke.Modules.UserDefinedTable
             if (!string.IsNullOrEmpty(txtSearch.Text))
                 Response.Redirect(string.Format("{0}?{1}={2}", FriendlyUrlHelpers.GetFriendlyUrl(ModuleId),
                     HttpUtility.UrlEncode(QueryString.Keyword), HttpUtility.UrlEncode(txtSearch.Text)));
+            else
+                Response.Redirect(FriendlyUrlHelpers.GetFriendlyUrl(ModuleId));
         }
 
         /// <summary>
@@ -58,17 +62,18 @@ namespace DotNetNuke.Modules.UserDefinedTable
                 // search options from query string
                 var searchOptions = BuildSearchOptions();
 
-                // template
-                var template = new HandlebarsTemplateController().GetTemplateByModuleId(ModuleId);
-                if (template == null || string.IsNullOrEmpty(template.TemplateString))
-                    throw new Exception("Template content not found");
-                searchOptions.TemplateContent = template.TemplateString;
+                // template content
+                var templateContent = GetTemplateContent();
+                if (string.IsNullOrEmpty(templateContent))
+                    return;
+
+                searchOptions.TemplateContent = templateContent;
 
                 // required JavaScripts
-                RegisterJavaScripts(template.RequiredJavaScripts);
+                RegisterJavaScripts();
 
                 // required Stylesheets
-                RegisterStylesheets(template.RequiredStylesheets);
+                RegisterStylesheets();
 
                 // get html from cache or nodejs power template engine
                 var html = new DataController().GetHtml(searchOptions, true);
@@ -82,6 +87,39 @@ namespace DotNetNuke.Modules.UserDefinedTable
                 if (Request.IsAuthenticated)
                     Exceptions.ProcessModuleLoadException(this, exc);
             }
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// Get Template content from settings
+        /// </summary>
+        /// <returns></returns>
+        string GetTemplateContent()
+        {
+            if (ModuleContext.Settings.ContainsKey(SettingName.UserDefinedHandlebarsTemplateUrl))
+            {
+                var url = ModuleContext.Settings[SettingName.UserDefinedHandlebarsTemplateUrl].AsString();
+                if (string.IsNullOrEmpty(url))
+                {
+                    Exceptions.ProcessModuleLoadException("Handlebars template url is not defined. Please get it configured!", this, new Exception());
+                    return null;
+                }
+
+                var file = FileManager.Instance.GetFile(ModuleContext.PortalId, url);
+                if (file == null)
+                {
+                    Exceptions.ProcessModuleLoadException(string.Format("DNN file not found. Url: {0}", url), this, new Exception());
+                    return null;
+                }
+
+                return HandlebarsTemplatesFile.ReadTemplateContentFromFile(file.FileId);
+            }
+
+            Exceptions.ProcessModuleLoadException("Handlebars template url is not defined. Please get it configured!", this, new Exception());
+            return null;
         }
 
         /// <summary>
@@ -99,16 +137,16 @@ namespace DotNetNuke.Modules.UserDefinedTable
             txtSearch.Text = Request.QueryString[QueryString.Keyword];
         }
 
-        #endregion
-
-        #region Private Methods
-
         /// <summary>
         /// Register JavaScripts
         /// </summary>
-        /// <param name="requiredJavaScripts"></param>
-        private void RegisterJavaScripts(string requiredJavaScripts)
+        private void RegisterJavaScripts()
         {
+            if (!ModuleContext.Settings.ContainsKey(SettingName.UserDefinedHandlebarsTemplateRequiredJavaScripts))
+                return;
+
+            var requiredJavaScripts =
+                ModuleContext.Settings[SettingName.UserDefinedHandlebarsTemplateRequiredJavaScripts].AsString();
             if (string.IsNullOrEmpty(requiredJavaScripts))
                 return;
 
@@ -125,9 +163,13 @@ namespace DotNetNuke.Modules.UserDefinedTable
         /// <summary>
         /// Register Stylesheets
         /// </summary>
-        /// <param name="requiredStylesheets"></param>
-        private void RegisterStylesheets(string requiredStylesheets)
+        private void RegisterStylesheets()
         {
+            if (!ModuleContext.Settings.ContainsKey(SettingName.UserDefinedHandlebarsTemplateRequiredStylesheets))
+                return;
+
+            var requiredStylesheets =
+                ModuleContext.Settings[SettingName.UserDefinedHandlebarsTemplateRequiredStylesheets].AsString();
             if (string.IsNullOrEmpty(requiredStylesheets))
                 return;
 
@@ -156,7 +198,8 @@ namespace DotNetNuke.Modules.UserDefinedTable
                 Keyword = Request.QueryString[QueryString.Keyword],
                 ModuleId = ModuleId,
                 TabId = TabId,
-                Pagination = true
+                Pagination = true,
+                IsEditMode = Request.IsAuthenticated || ModulePermissionController.CanEditModuleContent(new ModuleController().GetModule(ModuleId))
             };
 
             int skip;

@@ -53,7 +53,8 @@ namespace DotNetNuke.Modules.UserDefinedTable.Controllers
         public string GetHtml(SearchOptions options, bool allowAnonymous = false)
         {
             // look for cache first
-            var cachedHtmlContent = new CachedHtmlContentController().GetCachedHtmlContent(options.ModuleId, options.Skip, options.Limit, options.Keyword);
+            var cachedHtmlContent = new CachedHtmlContentController().GetCachedHtmlContent(options.ModuleId,
+                options.Skip, options.Limit, options.IsEditMode, options.Keyword);
             if (cachedHtmlContent != null && !string.IsNullOrEmpty(cachedHtmlContent.HtmlContent))
                 return cachedHtmlContent.HtmlContent;
 
@@ -94,7 +95,8 @@ namespace DotNetNuke.Modules.UserDefinedTable.Controllers
                     ModuleId = options.ModuleId,
                     LastModifiedDate = DateTime.Now,
                     Limit = options.Limit,
-                    Skip = options.Skip
+                    Skip = options.Skip,
+                    IsEditMode = options.IsEditMode
                 });
             return htmlContent;
         }

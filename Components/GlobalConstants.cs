@@ -127,7 +127,9 @@ namespace DotNetNuke.Modules.UserDefinedTable.Components
         public const string XslUserDefinedStyleSheet = "UDT_XslUserDefinedStyleSheet";
 
         // BEGIN: Handlebars template
-        public const string UserDefinedHandlebarsTemplate = "UDT_UserDefinedHandlebarsTemplate";
+        public const string UserDefinedHandlebarsTemplateUrl = "UDT_UserDefinedHandlebarsTemplateUrl";
+        public const string UserDefinedHandlebarsTemplateRequiredJavaScripts = "UDT_UserDefinedHandlebarsTemplateRequiredJavaScripts";
+        public const string UserDefinedHandlebarsTemplateRequiredStylesheets = "UDT_UserDefinedHandlebarsTemplateRequiredStylesheets";
         // END: Handlebars template
 
         public const string ShowSearchTextBox = "UDT_ShowSearchTextBox";

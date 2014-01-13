@@ -108,8 +108,10 @@
             
             <!-- BEGIN: Handlebars template -->
             <div class="dnnFormItem" id="handlebarsTemplatePanel" runat="server">
-				<dnn:Label runat="server" Suffix=":" />
+				<dnn:Label ID="lblUserDefinedHandlebarsUrlControl" runat="server" Suffix=":" ControlName="userDefinedHandlebarsUrlControl" />
                 <div class="pushRight">
+                    <Portal:URL ID="userDefinedHandlebarsUrlControl" runat="server" FileFilter="" Required="True" ShowTrack="False" 
+                                ShowNewWindow="False" ShowLog="False" ShowFiles="True" ShowUrls="False" ShowTabs="False" Width="200" />
 					<div class="BelowUrlControl">
 						<asp:LinkButton ID="cmdEditHandlebars" runat="server" CssClass="dnnSecondaryAction " resourcekey="cmdEditHandlebars" />
 						<asp:LinkButton CssClass="dnnPrimaryAction" resourcekey="cmdShowHandlebarsGenerator" ID="cmdGenerateHandlebars" runat="server" />

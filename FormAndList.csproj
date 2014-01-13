@@ -168,6 +168,13 @@
     <Compile Include="Controls\FieldSettings.ascx.designer.cs">
       <DependentUpon>FieldSettings.ascx</DependentUpon>
     </Compile>
+    <Compile Include="HandlebarsTemplatesFile.ascx.cs">
+      <DependentUpon>HandlebarsTemplatesFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlebarsTemplatesFile.ascx.designer.cs">
+      <DependentUpon>HandlebarsTemplatesFile.ascx</DependentUpon>
+    </Compile>
     <Compile Include="HandlebarsListView.ascx.cs">
       <DependentUpon>HandlebarsListView.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -356,6 +363,7 @@
     <Content Include="Controls\Field.ascx" />
     <Content Include="Controls\Fields.ascx" />
     <Content Include="Controls\FieldSettings.ascx" />
+    <Content Include="HandlebarsTemplatesFile.ascx" />
     <Content Include="HandlebarsListView.ascx" />
     <Content Include="HandlebarsTemplates.ascx" />
     <Content Include="FieldEditor.ascx" />
@@ -436,6 +444,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\HandlebarsTemplates.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\HandlebarsTemplatesFile.ascx.resx" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

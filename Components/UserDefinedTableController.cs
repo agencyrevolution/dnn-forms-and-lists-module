@@ -11,6 +11,7 @@ using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Users;
 using DotNetNuke.Modules.UserDefinedTable.Components;
+using DotNetNuke.Security.Permissions;
 using DotNetNuke.Services.Localization;
 using DotNetNuke.Services.SystemDateTime;
 using DotNetNuke.UI.Modules;
@@ -314,6 +315,7 @@ namespace DotNetNuke.Modules.UserDefinedTable
             contextTable.Columns.Add("TicksPerDay", typeof (long));
             contextTable.Columns.Add("LocalizedDate", typeof (string));
             contextTable.Columns.Add("Now", typeof (DateTime));
+            contextTable.Columns.Add("CanEdit", typeof (bool));
 
             if (paging != string.Empty)
             {
@@ -368,6 +370,7 @@ namespace DotNetNuke.Modules.UserDefinedTable
             row["NowInTicks"] = d.Ticks;
             row["TodayInTicks"] = d.Date.Ticks ;
             row["TicksPerDay"] = TimeSpan.TicksPerDay;
+            row["CanEdit"] = ModulePermissionController.CanEditModuleContent(moduleInfo);
             contextTable.Rows.Add(row);
 
             return contextTable;

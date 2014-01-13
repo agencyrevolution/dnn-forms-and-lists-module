@@ -630,9 +630,15 @@
     <value>Edit</value>
   </data>
   <data name="cmdShowHandlebarsGenerator.Text" xml:space="preserve">
-    <value>New</value>
+    <value>Generate New</value>
   </data>
   <data name="HandlebarsTrans.Text" xml:space="preserve">
+    <value>Handlebars Template</value>
+  </data>
+  <data name="lblUserDefinedHandlebarsUrlControl.Help" xml:space="preserve">
+    <value>Manage Handlebars Template for this portal</value>
+  </data>
+  <data name="lblUserDefinedHandlebarsUrlControl.Text" xml:space="preserve">
     <value>Handlebars Template</value>
   </data>
 </root>

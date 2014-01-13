@@ -21,6 +21,8 @@ namespace DotNetNuke.Modules.UserDefinedTable.Models.Caches
 
         public const string LimitProperty = "Limit";
 
+        public const string IsEditModeProperty = "IsEditMode";
+
         #endregion
 
         [JsonProperty(PropertyName = "id")]
@@ -37,6 +39,9 @@ namespace DotNetNuke.Modules.UserDefinedTable.Models.Caches
 
         [JsonProperty(PropertyName = "limit")]
         public int Limit { get; set; }
+
+        [JsonProperty(PropertyName = "isEditMode")]
+        public bool IsEditMode { get; set; }
 
         [JsonProperty(PropertyName = "htmlContent")]
         public string HtmlContent { get; set; }

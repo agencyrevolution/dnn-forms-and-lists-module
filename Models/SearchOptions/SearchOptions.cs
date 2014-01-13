@@ -25,6 +25,9 @@ namespace DotNetNuke.Modules.UserDefinedTable.Models.SearchOptions
         [JsonProperty(PropertyName = "keyword")]
         public string Keyword { get; set; }
 
+        [JsonProperty(PropertyName = "isEditMode")]
+        public bool IsEditMode { get; set; }
+
         [JsonProperty(PropertyName = "pagination")]
         public bool Pagination { get; set; }
 

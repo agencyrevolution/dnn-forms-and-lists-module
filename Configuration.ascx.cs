@@ -9,10 +9,8 @@ using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Framework;
 using DotNetNuke.Modules.UserDefinedTable.Components;
-using DotNetNuke.Modules.UserDefinedTable.Controllers;
 using DotNetNuke.Modules.UserDefinedTable.Controllers.Caches;
 using DotNetNuke.Modules.UserDefinedTable.Interfaces;
-using DotNetNuke.Modules.UserDefinedTable.Models.HandlebarsTemplates;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.FileSystem;
@@ -50,6 +48,7 @@ namespace DotNetNuke.Modules.UserDefinedTable
         protected UrlControl XslUserDefinedUrlControl;
         protected UrlControl XslTracking;
         protected UrlControl urlOnSubmissionRedirect;
+        protected UrlControl userDefinedHandlebarsUrlControl;
         // ReSharper restore InconsistentNaming
 
 
@@ -77,9 +76,7 @@ namespace DotNetNuke.Modules.UserDefinedTable
         {
             BindSettings();
         }
-
- 
-
+        
         /// -----------------------------------------------------------------------------
         /// <summary>
         ///   Gets the module settings and binds it to the web controls
@@ -150,6 +147,15 @@ namespace DotNetNuke.Modules.UserDefinedTable
             {
                 //Old StyleSheet removed
             }
+
+            #region Handlebars Template
+
+            if (ModuleContext.Settings.ContainsKey(SettingName.UserDefinedHandlebarsTemplateUrl))
+            {
+                userDefinedHandlebarsUrlControl.Url = ModuleContext.Settings[SettingName.UserDefinedHandlebarsTemplateUrl].AsString();
+            }
+
+            #endregion
 
             //Expand sections only, if not all values set to default:
             rblUsageListForm.SelectedValue = ModuleContext.Settings[SettingName.ListOrForm].AsString("List");
@@ -284,9 +290,6 @@ namespace DotNetNuke.Modules.UserDefinedTable
                 case RenderingMethod.UserDefinedHandlebarsTemplate:
                     rowUserDefined.Visible = false;
                     handlebarsTemplatePanel.Visible = true;
-                    var handlebarsTemplate = new HandlebarsTemplateController().GetTemplateByModuleId(ModuleContext.ModuleId);
-                    cmdGenerateHandlebars.Visible = handlebarsTemplate == null;
-                    cmdEditHandlebars.Visible = handlebarsTemplate != null;
                     break;
             }
         }
@@ -317,6 +320,9 @@ namespace DotNetNuke.Modules.UserDefinedTable
             ModuleContext.Settings[name] = value;
         }
 
+        /// <summary>
+        /// Save settings
+        /// </summary>
         void SaveSettings()
         {
             try
@@ -339,12 +345,10 @@ namespace DotNetNuke.Modules.UserDefinedTable
                     UpdateTabModuleSetting(SettingName.SortOrder, string.Empty);
                     UpdateTabModuleSetting(SettingName.SortField, string.Empty);
                 }
-
-
+                
                 //save rendering and rendering specific values
                 var strRenderingMethod = renderMethodRadioButtonList.SelectedValue;
                 var strUserDefinedXsl = "";
-                //var strPredefinedXsl = "";
                 if (strRenderingMethod == RenderingMethod.UserdefinedXSL && XslUserDefinedUrlControl.Url != string.Empty)
                 {
                     var file = FileManager.Instance.GetFile(int.Parse(XslUserDefinedUrlControl.Url.Substring(7)));
@@ -361,20 +365,16 @@ namespace DotNetNuke.Modules.UserDefinedTable
                 // BEGIN: Handlebars template
                 if (strRenderingMethod == RenderingMethod.UserDefinedHandlebarsTemplate)
                 {
-                    var handlebarsTemplate = new HandlebarsTemplateController().GetTemplateByModuleId(ModuleContext.ModuleId);
-                    if (handlebarsTemplate == null)
+                    var file = FileManager.Instance.GetFile(int.Parse(userDefinedHandlebarsUrlControl.Url.Substring(7)));
+                    if (file == null)
                     {
                         strRenderingMethod = RenderingMethod.GridRendering;
-                        cmdGenerateHandlebars.Visible = true;
-                        cmdEditHandlebars.Visible = false;
                     }
                     else
                     {
-                        cmdGenerateHandlebars.Visible = true;
-                        cmdEditHandlebars.Visible = false;
+                        UpdateTabModuleSetting(SettingName.UserDefinedHandlebarsTemplateUrl, file.Folder + file.FileName);
                     }
                 }
-                //UpdateTabModuleSetting(SettingName.UserDefinedHandlebarsTemplate, strUserDefinedHandlebarsTemplate);
                 // END: Handlebars template
 
                 UpdateTabModuleSetting(SettingName.XslUserDefinedStyleSheet, strUserDefinedXsl);
@@ -515,16 +515,30 @@ namespace DotNetNuke.Modules.UserDefinedTable
 
         #region Handlebars template
 
+        /// <summary>
+        /// Triggered when user clicks on Generate New button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void cmdGenerateHandlebars_Click(object sender, EventArgs e)
         {
             SaveSettings();
-            Response.Redirect(ModuleContext.EditUrl(ControlKeys.HandlebarsTemplates));
+            Response.Redirect(ModuleContext.EditUrl(ControlKeys.HandlebarsTemplatesFile), true);
         }
 
+        /// <summary>
+        /// Triggered when user clicks on Edit button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void cmdEditHandlebars_Click(object sender, EventArgs e)
         {
-            SaveSettings();
-            Response.Redirect(ModuleContext.EditUrl(ControlKeys.HandlebarsTemplates));
+            var fileId = GetEditableFileId(userDefinedHandlebarsUrlControl.Url.ToLowerInvariant());
+            if (fileId > -1)
+            {
+                SaveSettings();
+                Response.Redirect(ModuleContext.EditUrl("FileID", fileId.ToString(CultureInfo.InvariantCulture), ControlKeys.HandlebarsTemplatesFile), true);
+            }
         }
 
         #endregion
@@ -534,7 +548,11 @@ namespace DotNetNuke.Modules.UserDefinedTable
             Response.Redirect(Globals.NavigateURL(ModuleContext.TabId), true);
         }
 
-
+        /// <summary>
+        /// Save configuration
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void cmdUpdate_Click(object sender, EventArgs e)
         {
             if (ValidateMailTo())

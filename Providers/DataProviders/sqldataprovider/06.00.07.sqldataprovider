@@ -52,6 +52,16 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}UserDefinedCachedHtmlContents]') AND type in (N'U'))
 	BEGIN
 		PRINT 'UserDefinedCachedHtmlContents was already created';		
+				
+		/* Add IsEditMode column */
+		IF NOT EXISTS (SELECT column_name FROM [{objectQualifier}INFORMATION_SCHEMA].columns where table_name = 'UserDefinedCachedHtmlContents' and column_name = 'IsEditMode')
+			BEGIN
+				ALTER TABLE {databaseOwner}[{objectQualifier}UserDefinedCachedHtmlContents]
+				ADD [IsEditMode] [bit] NOT NULL
+			END
+		ELSE
+			print 'Notes column already existed in UserDefinedCachedHtmlContents table!'
+		
 	END
 ELSE
 	BEGIN
@@ -62,7 +72,8 @@ ELSE
 			[Keyword] [nvarchar](50) NULL,
 			[Skip] [int] NOT NULL,
 			[Limit] [int] NOT NULL,
-			[HtmlContent] [nvarchar](max) NULL,
+			[IsEditMode] [bit] NOT NULL,
+			[HtmlContent] [nvarchar](max) NOT NULL,
 			[LastModifiedDate] [datetime] NOT NULL,
 		 CONSTRAINT [PK_UserDefinedCachedHtmlContents] PRIMARY KEY CLUSTERED 
 		(
