@@ -641,4 +641,10 @@
   <data name="lblUserDefinedHandlebarsUrlControl.Text" xml:space="preserve">
     <value>Handlebars Template</value>
   </data>
+  <data name="ExportModuleSettings.Action" xml:space="preserve">
+    <value>Export Module Settings</value>
+  </data>
+  <data name="ImportModuleSettings.Action" xml:space="preserve">
+    <value>Import Module Settings</value>
+  </data>
 </root>

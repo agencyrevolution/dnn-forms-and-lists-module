@@ -1,0 +1,31 @@
+﻿.first-column {
+    width: 4%;
+    align-self: center;
+}
+
+.second-column {
+    width: 32%;
+}
+
+.third-column {
+    width: 32%;
+}
+
+.forth-column {
+    width: 32%;
+}
+
+.dnnGrid {
+    width: 98%;
+}
+
+.dnnGridHeader {
+    border-bottom: 1px black solid;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.dnnGridItem {
+    border-bottom: 1px #eee solid;
+    background: #fff;
+}

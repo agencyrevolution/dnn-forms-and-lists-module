@@ -26,6 +26,10 @@
     </file>
     <file>
       <path />
+      <name>ExportModuleSettings.ascx</name>
+    </file>
+    <file>
+      <path />
       <name>FieldEditor.ascx</name>
     </file>
     <file>
@@ -55,6 +59,10 @@
     <file>
       <path />
       <name>ImportCSV.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ImportModuleSettings.ascx</name>
     </file>
     <file>
       <path />
@@ -118,6 +126,10 @@
     </file>
     <file>
       <path>App_LocalResources/</path>
+      <name>ExportModuleSettings.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
       <name>FieldEditor.ascx.resx</name>
     </file>
     <file>
@@ -127,6 +139,10 @@
     <file>
       <path>App_LocalResources/</path>
       <name>HandlebarsTemplates.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>HandlebarsTemplatesFile.ascx.resx</name>
     </file>
     <file>
       <path>App_LocalResources/</path>

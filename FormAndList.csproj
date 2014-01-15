@@ -102,6 +102,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
@@ -111,6 +112,7 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -168,6 +170,20 @@
     <Compile Include="Controls\FieldSettings.ascx.designer.cs">
       <DependentUpon>FieldSettings.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ImportModuleSettings.ascx.cs">
+      <DependentUpon>ImportModuleSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportModuleSettings.ascx.designer.cs">
+      <DependentUpon>ImportModuleSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportModuleSettings.ascx.cs">
+      <DependentUpon>ExportModuleSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportModuleSettings.ascx.designer.cs">
+      <DependentUpon>ExportModuleSettings.ascx</DependentUpon>
+    </Compile>
     <Compile Include="HandlebarsTemplatesFile.ascx.cs">
       <DependentUpon>HandlebarsTemplatesFile.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,6 +198,18 @@
     <Compile Include="HandlebarsListView.ascx.designer.cs">
       <DependentUpon>HandlebarsListView.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Settings\CurrentViewOptions.cs" />
+    <Compile Include="Models\Settings\EmailSettings.cs" />
+    <Compile Include="Models\Settings\ExportSettings.cs" />
+    <Compile Include="Models\Settings\FormSettings.cs" />
+    <Compile Include="Models\Settings\HandlebarsTemplateSettings.cs" />
+    <Compile Include="Models\Settings\ImportSettings.cs" />
+    <Compile Include="Models\Settings\ISettings.cs" />
+    <Compile Include="Models\Settings\ListSettings.cs" />
+    <Compile Include="Models\Settings\ModuleConfiguration.cs" />
+    <Compile Include="Models\Settings\ModuleSettings.cs" />
+    <Compile Include="Models\Settings\SearchSettings.cs" />
+    <Compile Include="Models\Settings\XslTemplateSettings.cs" />
     <Compile Include="Models\Paginations\Navigator.cs" />
     <Compile Include="Models\Paginations\Page.cs" />
     <Compile Include="Models\Paginations\PageBase.cs" />
@@ -189,13 +217,6 @@
     <Compile Include="Models\QueryString.cs" />
     <Compile Include="ShowJson.ashx.cs">
       <DependentUpon>ShowJson.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="HandlebarsTemplates.ascx.cs">
-      <DependentUpon>HandlebarsTemplates.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HandlebarsTemplates.ascx.designer.cs">
-      <DependentUpon>HandlebarsTemplates.ascx</DependentUpon>
     </Compile>
     <Compile Include="CSV\CSVWriter.cs" />
     <Compile Include="DataTypes\Abstract\DataType.cs" />
@@ -363,9 +384,10 @@
     <Content Include="Controls\Field.ascx" />
     <Content Include="Controls\Fields.ascx" />
     <Content Include="Controls\FieldSettings.ascx" />
+    <Content Include="ImportModuleSettings.ascx" />
+    <Content Include="ExportModuleSettings.ascx" />
     <Content Include="HandlebarsTemplatesFile.ascx" />
     <Content Include="HandlebarsListView.ascx" />
-    <Content Include="HandlebarsTemplates.ascx" />
     <Content Include="FieldEditor.ascx" />
     <Content Include="Form.ascx" />
     <Content Include="HelpPopup.aspx" />
@@ -374,6 +396,8 @@
     <Content Include="module.css" />
     <Content Include="releasenotes.htm" />
     <Content Include="Settings.ascx" />
+    <Content Include="Styles\importModuleSettings.css" />
+    <Content Include="Styles\exportModuleSettings.css" />
     <Content Include="Styles\pagination.css" />
     <Content Include="XslStyleSheets\Tracking\Auto.xsl" />
     <Content Include="XslStyleSheets\XSLScripts.xml" />
@@ -447,6 +471,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\HandlebarsTemplatesFile.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ExportModuleSettings.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ImportModuleSettings.ascx.resx" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,10 +1,13 @@
 using System;
+using System.Globalization;
 using System.IO;
+using System.ServiceModel;
 using DotNetNuke.Entities.Icons;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Modules.UserDefinedTable.Components;
 using DotNetNuke.Security;
+using DotNetNuke.Services.FileSystem;
 using DotNetNuke.Services.Localization;
 
 
@@ -138,12 +141,14 @@ namespace DotNetNuke.Modules.UserDefinedTable
                 // BEGIN: Handlebars template
                 if (IsHandlebarsTemplateSelected())
                 {
+                    var url = GetEditUrl();
+
                     actions.Add(GetNextActionID(),
                         Localization.GetString("HandlebarsTemplate.Action", LocalResourceFile),
                         ModuleActionType.EditContent,
                         string.Empty,
                         Utilities.IconURL("Edit"),
-                        EditUrl(ControlKeys.HandlebarsTemplates),
+                        url,
                         false,
                         SecurityAccessLevel.Edit,
                         true,
@@ -151,16 +156,62 @@ namespace DotNetNuke.Modules.UserDefinedTable
                 }
                 // END: Handlebars template
 
+                #region Export/Import Settings
+
+                actions.Add(new ModuleAction(GetNextActionID(),
+                    Localization.GetString("ExportModuleSettings.Action", LocalResourceFile),
+                    ModuleActionType.ExportModule,
+                    string.Empty,
+                    Utilities.IconURL("Edit"),
+                    EditUrl(ControlKeys.ExportModuleSettings),
+                    string.Empty,
+                    false,
+                    SecurityAccessLevel.Edit,
+                    true,
+                    false));
+
+                actions.Add(new ModuleAction(GetNextActionID(),
+                    Localization.GetString("ImportModuleSettings.Action", LocalResourceFile),
+                    ModuleActionType.ImportModule,
+                    string.Empty,
+                    Utilities.IconURL("Edit"),
+                    EditUrl(ControlKeys.ImportModuleSettings),
+                    string.Empty,
+                    false,
+                    SecurityAccessLevel.Edit,
+                    true,
+                    false));
+                
+                #endregion
+
                 return actions;
             }
         }
 
+        /// <summary>
+        /// Get Edit url
+        /// </summary>
+        /// <returns></returns>
+        private string GetEditUrl()
+        {
+            if (!ModuleContext.Settings.ContainsKey(SettingName.UserDefinedHandlebarsTemplateUrl))
+                return EditUrl(ControlKeys.HandlebarsTemplatesFile);
+            var relativePath = ModuleContext.Settings[SettingName.UserDefinedHandlebarsTemplateUrl].AsString();
+            var file = FileManager.Instance.GetFile(ModuleContext.PortalId, relativePath);
+            return file != null
+                ? ModuleContext.EditUrl("FileID", file.FileId.ToString(CultureInfo.InvariantCulture),
+                    ControlKeys.HandlebarsTemplatesFile)
+                : EditUrl(ControlKeys.HandlebarsTemplatesFile);
+        }
+
+        /// <summary>
+        /// Check if rendering method is Handlebars template or not
+        /// </summary>
+        /// <returns></returns>
         private bool IsHandlebarsTemplateSelected()
         {
-            var controller = new ModuleController();
-            var settings = controller.GetTabModuleSettings(TabModuleId);
-            return settings.ContainsKey(SettingName.RenderingMethod) &&
-                   settings[SettingName.RenderingMethod].ToString().Equals(RenderingMethod.UserDefinedHandlebarsTemplate);
+            return ModuleContext.Settings.ContainsKey(SettingName.RenderingMethod) &&
+                   ModuleContext.Settings[SettingName.RenderingMethod].ToString().Equals(RenderingMethod.UserDefinedHandlebarsTemplate);
         }
     }
 }

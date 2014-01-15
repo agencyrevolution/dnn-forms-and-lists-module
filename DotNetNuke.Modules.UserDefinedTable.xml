@@ -851,6 +851,2411 @@
             To modify move field declaration from designer file to code-behind file.
             </remarks>
         </member>
+        <member name="T:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings">
+            -----------------------------------------------------------------------------
+            <summary>
+                Manage Handlebars Template
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.OnInit(System.EventArgs)">
+            <summary>
+                OnInit event handler
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.btnUpload_Click(System.Object,System.EventArgs)">
+            <summary>
+                Upload button click event handler
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.cmdBack_Click(System.Object,System.EventArgs)">
+            <summary>
+                Handle the click event on Back button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.cmdImport_Click(System.Object,System.EventArgs)">
+            <summary>
+                Handle the click event on Save button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.ShowPreview(DotNetNuke.Modules.UserDefinedTable.Models.Settings.ImportSettings)">
+            <summary>
+                Show preview and let user to choose which settings he want to force overriding
+            </summary>
+            <param name="importSettings"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.ShowError(System.String)">
+            <summary>
+                Show error message to let user know
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.BindData(DotNetNuke.Modules.UserDefinedTable.Models.Settings.ImportSettings)">
+            <summary>
+                Bind data for all data
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.BindData(System.String,System.String,System.Web.UI.WebControls.CheckBox,System.Web.UI.WebControls.PlaceHolder,System.Web.UI.WebControls.PlaceHolder)">
+            <summary>
+                Bind data for a setting name
+            </summary>
+            <param name="settingName"></param>
+            <param name="newSettingValue"></param>
+            <param name="checkbox"></param>
+            <param name="placeHolderCurretnSettingValue"></param>
+            <param name="placeHolderNewSettingValue"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.BindDataForTemplateContent(System.String,System.Web.UI.WebControls.CheckBox,System.Web.UI.WebControls.PlaceHolder,System.String,System.Web.UI.WebControls.PlaceHolder)">
+            <summary>
+                Read template content from file, then bind to proper placeholder
+            </summary>
+            <param name="settingName"></param>
+            <param name="checkBox"></param>
+            <param name="placeHolderCurrentSettingValue"></param>
+            <param name="newSettingValue"></param>
+            <param name="placeHolderNewSettingValue"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.GetSettingValue(System.String)">
+            <summary>
+                Get setting value from ModuleContext.Settings
+            </summary>
+            <param name="settingName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.ReadTemplateContentFromFile(System.String)">
+            <summary>
+                Read template content from file
+            </summary>
+            <param name="relativePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.ShowError(System.String,System.String,System.String,System.Exception)">
+            <summary>
+                Show error when saving file to DNN portal
+            </summary>
+            <param name="folderPath"></param>
+            <param name="filename"></param>
+            <param name="content"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveTemplateContentToFile(System.String,System.String)">
+            <summary>
+            Save Template content to Dnn file
+            </summary>
+            <param name="content"></param>
+            <param name="relativePath"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.TryParseFileInfo(System.String,System.String@,System.String@)">
+            <summary>
+            Parse folderPath and fileName from relativePath
+            </summary>
+            <param name="relativePath"></param>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveTemplateContentToFile(System.String,System.String,System.String)">
+            <summary>
+                Save template content to file
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.EnsureFolder(System.String)">
+            <summary>
+                Ensure folder be created if not existed
+            </summary>
+            <param name="folderPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveSetting(System.String,System.String)">
+            <summary>
+            Save setting
+            </summary>
+            <param name="settingKey"></param>
+            <param name="settingValue"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveSettings(DotNetNuke.Modules.UserDefinedTable.Models.Settings.SettingsBase)">
+            <summary>
+                Save settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveModuleSettings(DotNetNuke.Modules.UserDefinedTable.Models.Settings.ModuleSettings)">
+            <summary>
+                Build Module Settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveModuleConfiguration(DotNetNuke.Modules.UserDefinedTable.Models.Settings.ModuleConfiguration)">
+            <summary>
+                Save Module Configuration
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveCurrentViewOptions(DotNetNuke.Modules.UserDefinedTable.Models.Settings.CurrentViewOptions)">
+            <summary>
+                Save CurrentViewOptions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveEmailSettings(DotNetNuke.Modules.UserDefinedTable.Models.Settings.EmailSettings)">
+            <summary>
+                Save Email Settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveFormSettings(DotNetNuke.Modules.UserDefinedTable.Models.Settings.FormSettings)">
+            <summary>
+                Save forms settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveListSettings(DotNetNuke.Modules.UserDefinedTable.Models.Settings.ListSettings)">
+            <summary>
+                Save list settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveSearchSettings(DotNetNuke.Modules.UserDefinedTable.Models.Settings.SearchSettings)">
+            <summary>
+                Save search settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveXslTemplateSettings(DotNetNuke.Modules.UserDefinedTable.Models.Settings.XslTemplateSettings)">
+            <summary>
+                Save xsl template settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.SaveHandlebarsTemplateSettings(DotNetNuke.Modules.UserDefinedTable.Models.Settings.HandlebarsTemplateSettings)">
+            <summary>
+            Build handlebars template settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.hlpColumns">
+            <summary>
+            hlpColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.lblFileImport">
+            <summary>
+            lblFileImport control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.fileImport">
+            <summary>
+            fileImport control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.btnUpload">
+            <summary>
+            btnUpload control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.panelPreview">
+            <summary>
+            panelPreview control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.Label1">
+            <summary>
+            Label1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkEditOwnData">
+            <summary>
+            chkEditOwnData control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phEditOwnData">
+            <summary>
+            phEditOwnData control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phEditOwnDataNew">
+            <summary>
+            phEditOwnDataNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkForceCaptcha">
+            <summary>
+            chkForceCaptcha control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phForceCaptcha">
+            <summary>
+            phForceCaptcha control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phForceCaptchaNew">
+            <summary>
+            phForceCaptchaNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkInputFiltering">
+            <summary>
+            chkInputFiltering control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phInputFiltering">
+            <summary>
+            phInputFiltering control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phInputFilteringNew">
+            <summary>
+            phInputFilteringNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkDisplayColumns">
+            <summary>
+            chkDisplayColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phDisplayColumns">
+            <summary>
+            phDisplayColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phDisplayColumnsNew">
+            <summary>
+            phDisplayColumnsNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkHideSystemColumns">
+            <summary>
+            chkHideSystemColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phHideSystemColumns">
+            <summary>
+            phHideSystemColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phHideSystemColumnsNew">
+            <summary>
+            phHideSystemColumnsNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkPrivateColumns">
+            <summary>
+            chkPrivateColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phPrivateColumns">
+            <summary>
+            phPrivateColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phPrivateColumnsNew">
+            <summary>
+            phPrivateColumnsNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkUserRecordQuota">
+            <summary>
+            chkUserRecordQuota control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUserRecordQuota">
+            <summary>
+            phUserRecordQuota control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUserRecordQuotaNew">
+            <summary>
+            phUserRecordQuotaNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.Label2">
+            <summary>
+            Label2 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkAppearance">
+            <summary>
+            chkAppearance control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phAppearance">
+            <summary>
+            phAppearance control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phAppearanceNew">
+            <summary>
+            phAppearanceNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkUseButtonsInForm">
+            <summary>
+            chkUseButtonsInForm control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUseButtonsInForm">
+            <summary>
+            phUseButtonsInForm control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUseButtonsInFormNew">
+            <summary>
+            phUseButtonsInFormNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.Label3">
+            <summary>
+            Label3 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkUponSubmitAction">
+            <summary>
+            chkUponSubmitAction control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUponSubmitAction">
+            <summary>
+            phUponSubmitAction control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUponSubmitActionNew">
+            <summary>
+            phUponSubmitActionNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkUponSubmitRedirect">
+            <summary>
+            chkUponSubmitRedirect control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUponSubmitRedirect">
+            <summary>
+            phUponSubmitRedirect control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUponSubmitRedirectNew">
+            <summary>
+            phUponSubmitRedirectNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkSubmissionText">
+            <summary>
+            chkSubmissionText control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phSubmissionText">
+            <summary>
+            phSubmissionText control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phSubmissionTextNew">
+            <summary>
+            phSubmissionTextNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.Label4">
+            <summary>
+            Label4 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkRenderingMethod">
+            <summary>
+            chkRenderingMethod control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phRenderingMethod">
+            <summary>
+            phRenderingMethod control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phRenderingMethodNew">
+            <summary>
+            phRenderingMethodNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkExcludeFromSearch">
+            <summary>
+            chkExcludeFromSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phExcludeFromSearch">
+            <summary>
+            phExcludeFromSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phExcludeFromSearchNew">
+            <summary>
+            phExcludeFromSearchNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkSortOrder">
+            <summary>
+            chkSortOrder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phSortOrder">
+            <summary>
+            phSortOrder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phSortOrderNew">
+            <summary>
+            phSortOrderNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkSortField">
+            <summary>
+            chkSortField control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phSortField">
+            <summary>
+            phSortField control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phSortFieldNew">
+            <summary>
+            phSortFieldNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkPaging">
+            <summary>
+            chkPaging control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phPaging">
+            <summary>
+            phPaging control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phPagingNew">
+            <summary>
+            phPagingNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkFilter">
+            <summary>
+            chkFilter control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phFilter">
+            <summary>
+            phFilter control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phFilterNew">
+            <summary>
+            phFilterNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTopCount">
+            <summary>
+            chkTopCount control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTopCount">
+            <summary>
+            phTopCount control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTopCountNew">
+            <summary>
+            phTopCountNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkShowSearchTextBox">
+            <summary>
+            chkShowSearchTextBox control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phShowSearchTextBox">
+            <summary>
+            phShowSearchTextBox control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phShowSearchTextBoxNew">
+            <summary>
+            phShowSearchTextBoxNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkShowNoRecordsUntilSearch">
+            <summary>
+            chkShowNoRecordsUntilSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phShowNoRecordsUntilSearch">
+            <summary>
+            phShowNoRecordsUntilSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phShowNoRecordsUntilSearchNew">
+            <summary>
+            phShowNoRecordsUntilSearchNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkSimpleSearch">
+            <summary>
+            chkSimpleSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phSimpleSearch">
+            <summary>
+            phSimpleSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phSimpleSearchNew">
+            <summary>
+            phSimpleSearchNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkUrlSearch">
+            <summary>
+            chkUrlSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUrlSearch">
+            <summary>
+            phUrlSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phUrlSearchNew">
+            <summary>
+            phUrlSearchNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkXslTemplateUrl">
+            <summary>
+            chkXslTemplateUrl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phXslTemplateUrl">
+            <summary>
+            phXslTemplateUrl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phXslTemplateUrlNew">
+            <summary>
+            phXslTemplateUrlNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkXslTemplateContent">
+            <summary>
+            chkXslTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phXslTemplateContent">
+            <summary>
+            phXslTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phXslTemplateContentNew">
+            <summary>
+            phXslTemplateContentNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkHandlebarsTemplateUrl">
+            <summary>
+            chkHandlebarsTemplateUrl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phHandlebarsTemplateUrl">
+            <summary>
+            phHandlebarsTemplateUrl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phHandlebarsTemplateUrlNew">
+            <summary>
+            phHandlebarsTemplateUrlNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkHandlebarsTemplateContent">
+            <summary>
+            chkHandlebarsTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phHandlebarsTemplateContent">
+            <summary>
+            phHandlebarsTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phHandlebarsTemplateContentNew">
+            <summary>
+            phHandlebarsTemplateContentNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkRequiredJavaScripts">
+            <summary>
+            chkRequiredJavaScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phRequiredJavaScripts">
+            <summary>
+            phRequiredJavaScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phRequiredJavaScriptsNew">
+            <summary>
+            phRequiredJavaScriptsNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkRequiredStylesheets">
+            <summary>
+            chkRequiredStylesheets control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phRequiredStylesheets">
+            <summary>
+            phRequiredStylesheets control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phRequiredStylesheetsNew">
+            <summary>
+            phRequiredStylesheetsNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.Label5">
+            <summary>
+            Label5 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingScripts">
+            <summary>
+            chkTrackingScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingScripts">
+            <summary>
+            phTrackingScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingScriptsNew">
+            <summary>
+            phTrackingScriptsNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingEmailTo">
+            <summary>
+            chkTrackingEmailTo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailTo">
+            <summary>
+            phTrackingEmailTo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailToNew">
+            <summary>
+            phTrackingEmailToNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingEmailCc">
+            <summary>
+            chkTrackingEmailCc control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailCc">
+            <summary>
+            phTrackingEmailCc control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailCcNew">
+            <summary>
+            phTrackingEmailCcNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingEmailBcc">
+            <summary>
+            chkTrackingEmailBcc control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailBcc">
+            <summary>
+            phTrackingEmailBcc control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailBccNew">
+            <summary>
+            phTrackingEmailBccNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingEmailReplyTo">
+            <summary>
+            chkTrackingEmailReplyTo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailReplyTo">
+            <summary>
+            phTrackingEmailReplyTo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailReplyToNew">
+            <summary>
+            phTrackingEmailReplyToNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingEmailFrom">
+            <summary>
+            chkTrackingEmailFrom control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailFrom">
+            <summary>
+            phTrackingEmailFrom control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingEmailFromNew">
+            <summary>
+            phTrackingEmailFromNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingSubject">
+            <summary>
+            chkTrackingSubject control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingSubject">
+            <summary>
+            phTrackingSubject control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingSubjectNew">
+            <summary>
+            phTrackingSubjectNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingMessage">
+            <summary>
+            chkTrackingMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingMessage">
+            <summary>
+            phTrackingMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingMessageNew">
+            <summary>
+            phTrackingMessageNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingTriggerOnNew">
+            <summary>
+            chkTrackingTriggerOnNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTriggerOnNew">
+            <summary>
+            phTrackingTriggerOnNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTriggerOnNewNew">
+            <summary>
+            phTrackingTriggerOnNewNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingTriggerOnUpdate">
+            <summary>
+            chkTrackingTriggerOnUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTriggerOnUpdate">
+            <summary>
+            phTrackingTriggerOnUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTriggerOnUpdateNew">
+            <summary>
+            phTrackingTriggerOnUpdateNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingTriggerOnDelete">
+            <summary>
+            chkTrackingTriggerOnDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTriggerOnDelete">
+            <summary>
+            phTrackingTriggerOnDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTriggerOnDeleteNew">
+            <summary>
+            phTrackingTriggerOnDeleteNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingTextOnNew">
+            <summary>
+            chkTrackingTextOnNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTextOnNew">
+            <summary>
+            phTrackingTextOnNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTextOnNewNew">
+            <summary>
+            phTrackingTextOnNewNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingTextOnUpdate">
+            <summary>
+            chkTrackingTextOnUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTextOnUpdate">
+            <summary>
+            phTrackingTextOnUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTextOnUpdateNew">
+            <summary>
+            phTrackingTextOnUpdateNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.chkTrackingTextOnDelete">
+            <summary>
+            chkTrackingTextOnDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTextOnDelete">
+            <summary>
+            phTrackingTextOnDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.phTrackingTextOnDeleteNew">
+            <summary>
+            phTrackingTextOnDeleteNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.panelError">
+            <summary>
+            panelError control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.cmdImport">
+            <summary>
+            cmdImport control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ImportModuleSettings.cmdBack">
+            <summary>
+            cmdBack control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="T:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings">
+            -----------------------------------------------------------------------------
+            <summary>
+            Manage Handlebars Template
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.OnInit(System.EventArgs)">
+            <summary>
+            OnInit event handler
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+            Page Load event handler
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.cmdBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handle the click event on Back button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.cmdExport_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handle the click event on Save button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BindData">
+            <summary>
+            Bind data for all data
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BindData(System.String,System.Web.UI.WebControls.CheckBox,System.Web.UI.WebControls.PlaceHolder)">
+            <summary>
+            Bind data for a setting name
+            </summary>
+            <param name="settingName"></param>
+            <param name="checkbox"></param>
+            <param name="placeHolder"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BindDataForTemplateContent(System.String,System.Web.UI.WebControls.CheckBox,System.Web.UI.WebControls.PlaceHolder)">
+            <summary>
+            Read template content from file, then bind to proper placeholder
+            </summary>
+            <param name="settingName"></param>
+            <param name="checkBox"></param>
+            <param name="placeHolder"></param>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.GetSettingValue(System.String)">
+            <summary>
+            Get setting value from ModuleContext.Settings
+            </summary>
+            <param name="settingName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.ReadTemplateContentFromFile(System.String)">
+            <summary>
+            Read template content from file
+            </summary>
+            <param name="relativePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildExportSettings">
+            <summary>
+            Build export settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildModuleSettings">
+            <summary>
+            Build Module Settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildModuleConfiguration">
+            <summary>
+            Build Module Configuration
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildCurrentViewOptions">
+            <summary>
+            Build CurrentViewOptions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildEmailSettings">
+            <summary>
+            Build Email Settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildFormSettings">
+            <summary>
+            Build forms settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildListSettings">
+            <summary>
+            Build list settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildSearchSettings">
+            <summary>
+            Build search settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildXslTemplateSettings">
+            <summary>
+            Build xsl template settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.BuildHandlebarsTemplateSettings">
+            <summary>
+            Build handlebars template settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.hlpColumns">
+            <summary>
+            hlpColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkEditOwnData">
+            <summary>
+            chkEditOwnData control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phEditOwnData">
+            <summary>
+            phEditOwnData control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkForceCaptcha">
+            <summary>
+            chkForceCaptcha control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phForceCaptcha">
+            <summary>
+            phForceCaptcha control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkInputFiltering">
+            <summary>
+            chkInputFiltering control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phInputFiltering">
+            <summary>
+            phInputFiltering control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkDisplayColumns">
+            <summary>
+            chkDisplayColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phDisplayColumns">
+            <summary>
+            phDisplayColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkHideSystemColumns">
+            <summary>
+            chkHideSystemColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phHideSystemColumns">
+            <summary>
+            phHideSystemColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkPrivateColumns">
+            <summary>
+            chkPrivateColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phPrivateColumns">
+            <summary>
+            phPrivateColumns control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkUserRecordQuota">
+            <summary>
+            chkUserRecordQuota control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phUserRecordQuota">
+            <summary>
+            phUserRecordQuota control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkAppearance">
+            <summary>
+            chkAppearance control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phAppearance">
+            <summary>
+            phAppearance control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkUseButtonsInForm">
+            <summary>
+            chkUseButtonsInForm control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phUseButtonsInForm">
+            <summary>
+            phUseButtonsInForm control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkUponSubmitAction">
+            <summary>
+            chkUponSubmitAction control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phUponSubmitAction">
+            <summary>
+            phUponSubmitAction control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkUponSubmitRedirect">
+            <summary>
+            chkUponSubmitRedirect control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phUponSubmitRedirect">
+            <summary>
+            phUponSubmitRedirect control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkSubmissionText">
+            <summary>
+            chkSubmissionText control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phSubmissionText">
+            <summary>
+            phSubmissionText control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkRenderingMethod">
+            <summary>
+            chkRenderingMethod control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phRenderingMethod">
+            <summary>
+            phRenderingMethod control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkExcludeFromSearch">
+            <summary>
+            chkExcludeFromSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phExcludeFromSearch">
+            <summary>
+            phExcludeFromSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkSortOrder">
+            <summary>
+            chkSortOrder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phSortOrder">
+            <summary>
+            phSortOrder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkSortField">
+            <summary>
+            chkSortField control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phSortField">
+            <summary>
+            phSortField control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkPaging">
+            <summary>
+            chkPaging control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phPaging">
+            <summary>
+            phPaging control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkFilter">
+            <summary>
+            chkFilter control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phFilter">
+            <summary>
+            phFilter control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTopCount">
+            <summary>
+            chkTopCount control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTopCount">
+            <summary>
+            phTopCount control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkShowSearchTextBox">
+            <summary>
+            chkShowSearchTextBox control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phShowSearchTextBox">
+            <summary>
+            phShowSearchTextBox control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkShowNoRecordsUntilSearch">
+            <summary>
+            chkShowNoRecordsUntilSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phShowNoRecordsUntilSearch">
+            <summary>
+            phShowNoRecordsUntilSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkSimpleSearch">
+            <summary>
+            chkSimpleSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phSimpleSearch">
+            <summary>
+            phSimpleSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkUrlSearch">
+            <summary>
+            chkUrlSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phUrlSearch">
+            <summary>
+            phUrlSearch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkXslTemplateUrl">
+            <summary>
+            chkXslTemplateUrl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phXslTemplateUrl">
+            <summary>
+            phXslTemplateUrl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkXslTemplateContent">
+            <summary>
+            chkXslTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phXslTemplateContent">
+            <summary>
+            phXslTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkHandlebarsTemplateUrl">
+            <summary>
+            chkHandlebarsTemplateUrl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phHandlebarsTemplateUrl">
+            <summary>
+            phHandlebarsTemplateUrl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkHandlebarsTemplateContent">
+            <summary>
+            chkHandlebarsTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phHandlebarsTemplateContent">
+            <summary>
+            phHandlebarsTemplateContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkRequiredJavaScripts">
+            <summary>
+            chkRequiredJavaScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phRequiredJavaScripts">
+            <summary>
+            phRequiredJavaScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkRequiredStylesheets">
+            <summary>
+            chkRequiredStylesheets control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phRequiredStylesheets">
+            <summary>
+            phRequiredStylesheets control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingScripts">
+            <summary>
+            chkTrackingScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingScripts">
+            <summary>
+            phTrackingScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingEmailTo">
+            <summary>
+            chkTrackingEmailTo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingEmailTo">
+            <summary>
+            phTrackingEmailTo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingEmailCc">
+            <summary>
+            chkTrackingEmailCc control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingEmailCc">
+            <summary>
+            phTrackingEmailCc control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingEmailBcc">
+            <summary>
+            chkTrackingEmailBcc control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingEmailBcc">
+            <summary>
+            phTrackingEmailBcc control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingEmailReplyTo">
+            <summary>
+            chkTrackingEmailReplyTo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingEmailReplyTo">
+            <summary>
+            phTrackingEmailReplyTo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingEmailFrom">
+            <summary>
+            chkTrackingEmailFrom control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingEmailFrom">
+            <summary>
+            phTrackingEmailFrom control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingSubject">
+            <summary>
+            chkTrackingSubject control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingSubject">
+            <summary>
+            phTrackingSubject control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingMessage">
+            <summary>
+            chkTrackingMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingMessage">
+            <summary>
+            phTrackingMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingTriggerOnNew">
+            <summary>
+            chkTrackingTriggerOnNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingTriggerOnNew">
+            <summary>
+            phTrackingTriggerOnNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingTriggerOnUpdate">
+            <summary>
+            chkTrackingTriggerOnUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingTriggerOnUpdate">
+            <summary>
+            phTrackingTriggerOnUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingTriggerOnDelete">
+            <summary>
+            chkTrackingTriggerOnDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingTriggerOnDelete">
+            <summary>
+            phTrackingTriggerOnDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingTextOnNew">
+            <summary>
+            chkTrackingTextOnNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingTextOnNew">
+            <summary>
+            phTrackingTextOnNew control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingTextOnUpdate">
+            <summary>
+            chkTrackingTextOnUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingTextOnUpdate">
+            <summary>
+            phTrackingTextOnUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.chkTrackingTextOnDelete">
+            <summary>
+            chkTrackingTextOnDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.phTrackingTextOnDelete">
+            <summary>
+            phTrackingTextOnDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.panelError">
+            <summary>
+            panelError control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.cmdExport">
+            <summary>
+            cmdExport control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.UserDefinedTable.ExportModuleSettings.cmdBack">
+            <summary>
+            cmdBack control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
         <member name="T:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplatesFile">
             -----------------------------------------------------------------------------
             <summary>
@@ -1333,230 +3738,6 @@
         <member name="T:DotNetNuke.Modules.UserDefinedTable.ShowJson">
             <summary>
             Summary description for ShowJson
-            </summary>
-        </member>
-        <member name="T:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates">
-            -----------------------------------------------------------------------------
-            <summary>
-            Manage Handlebars Template
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.btnGetJson_Click(System.Object,System.EventArgs)">
-            <summary>
-            Get JSON
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.btnGetHtml_Click(System.Object,System.EventArgs)">
-            <summary>
-            Handle the click event on GetHtml button.
-            Send request to nodejs power template app to get html from Json and Handlebars template
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.cmdBack_Click(System.Object,System.EventArgs)">
-            <summary>
-            Handle the click event on Back button
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.cmdSave_Click(System.Object,System.EventArgs)">
-            <summary>
-            Handle the click event on Save button
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.BindData">
-            <summary>
-            Fetch data from database and bind to ASP controls
-            </summary>
-        </member>
-        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.Validate">
-            <summary>
-            Validate Handlebars template before saving
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.SaveHandlebarsTemplate">
-            <summary>
-            Save Handlebars Template
-            </summary>
-        </member>
-        <member name="M:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.UpdateSettings">
-            <summary>
-            Update Settings
-            </summary>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.hlpColumns">
-            <summary>
-            hlpColumns control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbTemplateContent">
-            <summary>
-            lbTemplateContent control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtTemplateContent">
-            <summary>
-            txtTemplateContent control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbRequiredJavaScripts">
-            <summary>
-            lbRequiredJavaScripts control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtRequiredJavaScripts">
-            <summary>
-            txtRequiredJavaScripts control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbRequiredStylesheets">
-            <summary>
-            lbRequiredStylesheets control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtRequiredStylesheets">
-            <summary>
-            txtRequiredStylesheets control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbSkip">
-            <summary>
-            lbSkip control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtSkip">
-            <summary>
-            txtSkip control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.lbLimit">
-            <summary>
-            lbLimit control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtLimit">
-            <summary>
-            txtLimit control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.btnGetJson">
-            <summary>
-            btnGetJson control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.btnGetHtml">
-            <summary>
-            btnGetHtml control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtJson">
-            <summary>
-            txtJson control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.txtHtml">
-            <summary>
-            txtHtml control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.panelPreview">
-            <summary>
-            panelPreview control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.cmdSave">
-            <summary>
-            cmdSave control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.cmdBack">
-            <summary>
-            cmdBack control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="P:DotNetNuke.Modules.UserDefinedTable.HandlebarsTemplates.ModuleActions">
-            <summary>
-            List of Module Actions for this view
             </summary>
         </member>
         <member name="T:DotNetNuke.Modules.UserDefinedTable.DataType">
@@ -2116,6 +4297,18 @@
             Auto-generated field.
             To modify move field declaration from designer file to code-behind file.
             </remarks>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Default.GetEditUrl">
+            <summary>
+            Get Edit url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.UserDefinedTable.Default.IsHandlebarsTemplateSelected">
+            <summary>
+            Check if rendering method is Handlebars template or not
+            </summary>
+            <returns></returns>
         </member>
         <member name="F:DotNetNuke.Modules.UserDefinedTable.EditForm.divForm">
             <summary>

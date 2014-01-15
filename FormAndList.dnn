@@ -314,6 +314,30 @@
                     <viewOrder>0</viewOrder>
                   </moduleControl>
 
+                  <moduleControl>
+                    <controlKey>ImportModuleSettings</controlKey>
+                    <controlSrc>DesktopModules/UserDefinedTable/ImportModuleSettings.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Import Module Settings</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl></helpUrl>
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+
+                  <moduleControl>
+                    <controlKey>ExportModuleSettings</controlKey>
+                    <controlSrc>DesktopModules/UserDefinedTable/ExportModuleSettings.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Export Module Settings</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl></helpUrl>
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+
                 </moduleControls>
                 <permissions>
                   <permission code="UDTEDIT" key="ROWEDIT" name="Edit Row" />

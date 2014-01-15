@@ -642,6 +642,35 @@ namespace DotNetNuke.Modules.UserDefinedTable
                 actions.Add(ModuleContext.GetNextActionID(),
                             Localization.GetString("DeleteAll.Action", LocalResourceFile), "", "",
                             Utilities.IconURL("Save"), url, false, SecurityAccessLevel.Edit, true, false);
+
+                #region Export/Import Settings
+
+                actions.Add(new ModuleAction(ModuleContext.GetNextActionID(),
+                    Localization.GetString("ExportModuleSettings.Action", LocalResourceFile),
+                    ModuleActionType.ExportModule,
+                    string.Empty,
+                    Utilities.IconURL("Edit"),
+                    ModuleContext.EditUrl(ControlKeys.ExportModuleSettings),
+                    string.Empty,
+                    false,
+                    SecurityAccessLevel.Edit,
+                    true,
+                    false));
+
+                actions.Add(new ModuleAction(ModuleContext.GetNextActionID(),
+                    Localization.GetString("ImportModuleSettings.Action", LocalResourceFile),
+                    ModuleActionType.ImportModule,
+                    string.Empty,
+                    Utilities.IconURL("Edit"),
+                    ModuleContext.EditUrl(ControlKeys.ImportModuleSettings),
+                    string.Empty,
+                    false,
+                    SecurityAccessLevel.Edit,
+                    true,
+                    false));
+
+                #endregion
+
                 return actions;
             }
         }

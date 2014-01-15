@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,31 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ModuleHelp.Text" xml:space="preserve">
-    <value>&lt;h1&gt;About the Form and List Module&lt;/h1&gt;
-&lt;p&gt;The Form and List Module allows you to manage an individual table of data, where each column of data is a specific data type and each row represents a single record.&amp;#160;Column headings, when clicked, reorder data alphanumerically&amp;#160;A-Z or Z-A. If the feature is enabled, you may &lt;strong&gt;Search&lt;/strong&gt; through records that contain only select data.&lt;/p&gt;
-&lt;p&gt;If granted permission by the site Administrator,&amp;#160;you can &lt;strong&gt;Add&amp;#160;New Record&lt;/strong&gt; and&amp;#160;optionally&amp;#160;&lt;strong&gt;Edit&lt;/strong&gt;&amp;#160;and &lt;strong&gt;Delete&lt;/strong&gt; any records or only those records you have added yourself. If you have the ability to&amp;#160;add or edit records without being logged in this site, you may need to enter a CAPTCHA confirmation code.&lt;/p&gt;
-&lt;p&gt;Page Administrators can edit &lt;strong&gt;Module Settings&lt;/strong&gt; and select &lt;strong&gt;Form and List Configuration&lt;/strong&gt; from the module Action Menu to define columns and column properties.&lt;/p&gt;</value>
+  <data name="plCurrentViewOptions.Text" xml:space="preserve">
+    <value>Current View Options</value>
   </data>
-  <data name="CreateTemplate.Action" xml:space="preserve">
-    <value>Save as Template</value>
+  <data name="plEmailSettings.Text" xml:space="preserve">
+    <value>Email Settings</value>
   </data>
-  <data name="ContentOptions.Action" xml:space="preserve">
-    <value>Form and List Configuration</value>
+  <data name="plFormSettings.Text" xml:space="preserve">
+    <value>Form Settings</value>
   </data>
-  <data name="ExportCSV.Action" xml:space="preserve">
-    <value>Export to CSV file</value>
+  <data name="plListSettings.Text" xml:space="preserve">
+    <value>List Settings</value>
   </data>
-  <data name="ImportCSV.Action" xml:space="preserve">
-    <value>Import from CSV file</value>
-  </data>
-  <data name="HandlebarsTemplate.Action" xml:space="preserve">
-    <value>Handlebars Template</value>
-  </data>
-  <data name="ExportModuleSettings.Action" xml:space="preserve">
-    <value>Export Module Settings</value>
-  </data>
-  <data name="ImportModuleSettings.Action" xml:space="preserve">
-    <value>Import Module Settings</value>
+  <data name="plModuleSettings.Text" xml:space="preserve">
+    <value>Module Settings</value>
   </data>
 </root>
